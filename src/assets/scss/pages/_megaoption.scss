@@ -1,0 +1,175 @@
+/**=====================
+   19. Mega option CSS Start
+==========================**/
+.mega-inline {
+	margin-bottom: -30px;
+	display: flex;
+	.card {
+		border: 1px solid #f3f3f3;
+		box-shadow: $card-box-shadow;
+	}
+	.mega-title-badge {
+		display: table;
+		width: 100%;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.media {
+		margin-left: 20px;
+		.radio {
+			margin-left: 3px;
+		}
+	}
+}
+.mega-option{
+	.card{
+		.media-body{
+			h6{
+				.badge{
+					padding: 6px 5px 4px;
+				}
+			}
+		}
+	}
+}
+.mega-vertical{
+	display: flex;
+	flex-wrap: wrap;
+	.card{
+		box-shadow: $card-box-shadow;
+	}
+	.mega-title-badge{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		font-size: 14px;
+    	font-weight: 600;
+    	text-transform: uppercase;
+	}
+	.media {
+		margin-left: 16px;
+		.radio {
+			margin-left: 3px;
+		}
+	}
+}
+.mega-title{
+	font-weight: 600;
+}
+.mega-horizontal{
+	display: flex;
+	flex-wrap: wrap;
+	.card{
+		border: 1px solid #f3f3f3;
+		box-shadow: $card-box-shadow;
+	}
+	.mega-title-badge{
+		display:table;
+		width: 100%;
+		font-size: 14px;
+    	font-weight: 600;
+    	text-transform: uppercase;
+	}
+	.media {
+		margin-left: 16px;
+		.radio {
+			margin-left: 3px;
+		}
+	}
+}
+.plain-style{
+	.card{
+		box-shadow: none;
+		border: none !important;
+	}
+}
+.border-style{
+	.card{
+		box-shadow: none;
+		border: 1px solid $light-gray !important;
+	}
+}
+.offer-style{
+	.card{
+		box-shadow: none;
+		border: 1px dashed $light-gray !important;
+	}
+}
+.rating-star-wrapper{
+	color: #797979;
+}
+/**=====================
+     19. Mega option CSS Ends
+==========================**/
+
+// Розовый
+.radio-pink {
+	input[type="radio"]:checked + label::after {
+		background-color: #f73164 !important;
+	}
+	input[type="radio"] + label::before {
+		border-color: #f73164 !important;
+	}
+}
+
+.bg-pink {
+	background-color: #f73164 !important;
+}
+
+// Синий
+.radio-blue {
+	input[type="radio"]:checked + label::after {
+		background-color: #037ee5 !important;
+	}
+	input[type="radio"] + label::before {
+		border-color: #037ee5 !important;
+	}
+}
+
+.bg-blue {
+	background-color: #037ee5 !important;
+}
+
+// Зелёный
+.radio-green {
+	input[type="radio"]:checked + label::after {
+		background-color: #51bb25 !important;
+	}
+	input[type="radio"] + label::before {
+		border-color: #51bb25 !important;
+	}
+}
+
+.bg-green {
+	background-color: #51bb25 !important;
+}
+
+// Пурпурный
+.radio-purple {
+	input[type="radio"]:checked + label::after {
+		background-color: #eb07fe !important;
+	}
+	input[type="radio"] + label::before {
+		border-color: #eb07fe !important;
+	}
+}
+
+.bg-purple {
+	background-color: #eb07fe !important;
+}
+
+// Золотой
+.radio-gold {
+	input[type="radio"]:checked + label::after {
+		background-color: gold !important;
+	}
+	input[type="radio"] + label::before {
+		border-color: gold !important;
+	}
+}
+
+.bg-gold {
+	background-color: gold !important;
+}
