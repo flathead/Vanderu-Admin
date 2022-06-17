@@ -283,8 +283,8 @@ export const FancyShirt = "Fancy Shirt"
 export const FancyShirtPrice = "$100.00"
 
 // invoice 
-export const Cuba = "Cuba"
-export const HelloCuba = "hello@Cuba.in"
+export const Cuba = "Vanderu Admin"
+export const HelloCuba = "https://t.me/vanderusupport_bot"
 
 export const InvoiceHash = "Invoice #"
 export const IssuedMay = "Issued: May"

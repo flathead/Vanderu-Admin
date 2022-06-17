@@ -44,7 +44,7 @@ const Logins = () => {
         setValue(man);
         setName('Иван Иванов');
         localStorage.setItem('token', Jwt_token);
-        window.location.href = `${process.env.PUBLIC_URL}/dashboard/default/${layout}`;
+        window.location.href = `${process.env.PUBLIC_URL}/dashboard/${layout}`;
         return user;
       });
   };
