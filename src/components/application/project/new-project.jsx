@@ -77,7 +77,7 @@ const Newproject = (props) => {
     console.log("data", data);
     if (data !== '') {
       dispatch(addNewProject(data))
-      props.history(`${process.env.PUBLIC_URL}/app/project/project-list/${layout}`)
+      props.history(`${process.env.PUBLIC_URL}/project/project-list/${layout}`)
     } else {
       errors.showMessages();
     }
@@ -399,7 +399,7 @@ const Newproject = (props) => {
                     <Col>
                       <FormGroup>
                         <Button color="success" className="me-3">{Add}</Button>
-                        <Link to={`${process.env.PUBLIC_URL}/app/project/project-list/Dubai`}>
+                        <Link to={`${process.env.PUBLIC_URL}/project/project-list/${layout}`}>
                           <Button color="danger">{"Отменить"}</Button>
                         </Link>
                       </FormGroup>

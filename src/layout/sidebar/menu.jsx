@@ -4,24 +4,24 @@ export const MENUITEMS = [
         menutitle: "Vanderu",
         menucontent: "Платные каналы / чаты ",
         Items: [
-            { path: `${process.env.PUBLIC_URL}/dashboard/default`, title: 'Главная', icon: Home, type: 'link', active: false },
+            { path: `${process.env.PUBLIC_URL}/dashboard`, title: 'Главная', icon: Home, type: 'link', active: false },
             {
                 title: 'Проекты', icon: Box, type: 'sub', badge: "badge badge-danger", badgetxt: "New", active: false, children: [
-                    { path: `${process.env.PUBLIC_URL}/app/project/project-list`, type: 'link', title: 'Каталог проектов' },
-                    { path: `${process.env.PUBLIC_URL}/app/project/new-project`, type: 'link', title: 'Создать новый' }
+                    { path: `${process.env.PUBLIC_URL}/project/project-list`, type: 'link', title: 'Каталог проектов' },
+                    { path: `${process.env.PUBLIC_URL}/project/new-project`, type: 'link', title: 'Создать новый' }
                 ]
             },
-            { title: 'Статистика', icon: BarChart, type: 'link', active: false, path: `${process.env.PUBLIC_URL}/app/statistic` },
-            { title: 'Рассылка', icon: Mail,  type: 'link', active: false, path: `${process.env.PUBLIC_URL}/app/spam` }
+            { title: 'Статистика', icon: BarChart, type: 'link', active: false, path: `${process.env.PUBLIC_URL}/statistic` },
+            { title: 'Рассылка', icon: Mail,  type: 'link', active: false, path: `${process.env.PUBLIC_URL}/mailing` }
         ]
     },
     {
         menutitle: "Другое",
         menucontent: "Информация, поддержка",
         Items: [
-            { path: `${process.env.PUBLIC_URL}/app/pay`, icon: ShoppingBag, title: 'Платежные системы', active: false, type: 'link' },
-            { path: `${process.env.PUBLIC_URL}/app/faq`, icon: HelpCircle, type: 'link', active: false, title: 'ЧаВо' },
-            { path: `${process.env.PUBLIC_URL}/app/support`, icon: Users, type: 'link', active: false, title: 'Тех. поддержка' },
+            { path: `${process.env.PUBLIC_URL}/pay`, icon: ShoppingBag, title: 'Платежные системы', active: false, type: 'link' },
+            { path: `${process.env.PUBLIC_URL}/faq`, icon: HelpCircle, type: 'link', active: false, title: 'ЧаВо' },
+            { path: `${process.env.PUBLIC_URL}/support`, icon: Users, type: 'link', active: false, title: 'Тех. поддержка' },
         ]
     }
 

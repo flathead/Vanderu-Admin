@@ -19,7 +19,7 @@ const Support = () => {
                             <Form>
                                 <CardHeader>
                                     <p>Есть проблемы или нужна помощь? Отправьте Ваше сообщение поддержке.</p>
-                                    <p>Почитайте <Link to={`${process.env.PUBLIC_URL}/app/faq/${layout}`}>ЧаВо</Link>, может решение Вашей проблемы уже существует.</p>
+                                    <p>Почитайте <Link to={`${process.env.PUBLIC_URL}/faq/${layout}`}>ЧаВо</Link>, может решение Вашей проблемы уже существует.</p>
                                 </CardHeader>
                                 <CardBody>
                                     <span>Сообщение:</span>

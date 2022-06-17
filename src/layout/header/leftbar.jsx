@@ -53,7 +53,7 @@ const Leftbar = (props) => {
     <Fragment>
       <div className="header-logo-wrapper col-auto p-0" id="out_side_click">
         <div className="logo-wrapper">
-          <Link to={`${process.env.PUBLIC_URL}/dashboard/default/`}>
+          <Link to={`${process.env.PUBLIC_URL}/dashboard/`}>
             <img className="img-fluid for-light" src={require("../../assets/images/logo/logo.png")} alt="" />
             <img className="img-fluid for-dark" src={require("../../assets/images/logo/logo_dark.png")} alt="" />
           </Link>
@@ -65,10 +65,10 @@ const Leftbar = (props) => {
       <Col className="left-header horizontal-wrapper ps-0">
         <ul className="horizontal-menu">
           <li className="mega-menu outside">
-            <Link className={`nav-link ${bonusui ? 'active' : ''}`} to={`${process.env.PUBLIC_URL}/app/tariffs/tariffs/${layout}`}><Layers /><span>Оплата сервиса</span></Link>
+            <Link className={`nav-link ${bonusui ? 'active' : ''}`} to={`${process.env.PUBLIC_URL}/tariff/${layout}`}><Layers /><span>Оплата сервиса</span></Link>
           </li>
           <li className="level-menu outside">
-            <Link className={levelMenu ? "nav-link active" : "nav-link"} to={`${process.env.PUBLIC_URL}/app/partnership/${layout}`}><Inbox /><span>Партнерская программа</span></Link>
+            <Link className={levelMenu ? "nav-link active" : "nav-link"} to={`${process.env.PUBLIC_URL}/partnership/${layout}`}><Inbox /><span>Партнерская программа</span></Link>
             </li>
         </ul>
       </Col>

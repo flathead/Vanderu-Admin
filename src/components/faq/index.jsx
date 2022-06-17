@@ -35,7 +35,7 @@ const FaqComponent = () => {
                                     <Media className="faq-widgets">
                                         <Media body>
                                             <h5>{"Часто задаваемые вопросы"}</h5>
-                                            <p>Если вы не нашли решения своей проблемы, напишите сообщение в <Link style={colorWhite} to={`${process.env.PUBLIC_URL}/app/support/${layout}`}>тех. поддержку</Link>.</p>
+                                            <p>Если вы не нашли решения своей проблемы, напишите сообщение в <Link style={colorWhite} to={`${process.env.PUBLIC_URL}/support/${layout}`}>тех. поддержку</Link>.</p>
                                         </Media><FileText />
                                     </Media>
                                 </CardBody>
@@ -148,7 +148,7 @@ const FaqComponent = () => {
                                 </Col>
                                 <Col md="6">
                                 <div className="text-end">
-                                    <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/app/support/${layout}`}> <PlusSquare />{"Написать"}</Link>
+                                    <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/support/${layout}`}> <PlusSquare />{"Написать"}</Link>
                                 </div>
                                 </Col>
                             </Row>

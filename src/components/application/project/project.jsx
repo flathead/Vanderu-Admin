@@ -43,7 +43,7 @@ const Project = () => {
                 </Col>
                 <Col md="6">
                   <div className="text-end">
-                    <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/app/project/new-project/${layout}`}> <PlusSquare />{CreateNewProject}</Link>
+                    <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/project/new-project/${layout}`}> <PlusSquare />{CreateNewProject}</Link>
                   </div>
                 </Col>
               </Row>
@@ -88,7 +88,7 @@ const Project = () => {
                               </ul>
                             </div>
                             <div className="project-status mt-4">
-                              <button style={mr1rem} className="btn btn-primary-gradien">К проекту</button>
+                              <Link to={`${process.env.PUBLIC_URL}/project/inside/${layout}`}><button style={mr1rem} className="btn btn-primary-gradien">К проекту</button></Link>
                               <button className="btn btn-danger-gradien"><i class="icofont icofont-ui-delete"></i> Удалить</button>
                             </div>
                           </div>
@@ -131,7 +131,7 @@ const Project = () => {
                               </ul>
                             </div>
                             <div className="project-status mt-4">
-                              <button style={mr1rem} className="btn btn-primary-gradien">К проекту</button>
+                              <Link to={`${process.env.PUBLIC_URL}/project/inside/${layout}`}><button style={mr1rem} className="btn btn-primary-gradien">К проекту</button></Link>
                               <button className="btn btn-danger-gradien"><i class="icofont icofont-ui-delete"></i> Удалить</button>
                             </div>
                           </div>
@@ -174,7 +174,7 @@ const Project = () => {
                               </ul>
                             </div>
                             <div className="project-status mt-4">
-                              <button style={mr1rem} className="btn btn-primary-gradien">К проекту</button>
+                              <Link to={`${process.env.PUBLIC_URL}/project/inside/${layout}`}><button style={mr1rem} className="btn btn-primary-gradien">К проекту</button></Link>
                               <button className="btn btn-danger-gradien"><i class="icofont icofont-ui-delete"></i> Удалить</button>
                             </div>
                           </div>
@@ -220,7 +220,7 @@ const Project = () => {
                               </ul>
                             </div>
                             <div className="project-status mt-4">
-                              <button style={mr1rem} className="btn btn-primary-gradien">К проекту</button>
+                              <Link to={`${process.env.PUBLIC_URL}/project/inside/${layout}`}><button style={mr1rem} className="btn btn-primary-gradien">К проекту</button></Link>
                               <button className="btn btn-danger-gradien"><i class="icofont icofont-ui-delete"></i> Удалить</button>
                             </div>
                           </div>

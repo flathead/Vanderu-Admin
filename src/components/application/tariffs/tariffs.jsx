@@ -18,7 +18,7 @@ import { useForm } from 'react-hook-form'
 
 const Tariffs = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, formState: { errors } } = useForm();
     // Modal open state
     const [modal, setModal] = useState(false);
   

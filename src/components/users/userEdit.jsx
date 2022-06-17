@@ -177,7 +177,7 @@ const UserEdit = (props) => {
 
                       {data.map((items,i) => 
                         <tr key={i}>
-                          <td><Link to={`${process.env.PUBLIC_URL}/app/project/project-list/${layout}`}>{items.projectName}</Link></td>
+                          <td><Link to={`${process.env.PUBLIC_URL}/project/project-list/${layout}`}>{items.projectName}</Link></td>
                           <td>{items.date}</td>
                           <td><span className="status-icon bg-success"></span>{items.status}</td>
                           <td>{items.price}</td>
