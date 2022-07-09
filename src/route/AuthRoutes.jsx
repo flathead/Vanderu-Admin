@@ -11,11 +11,6 @@ import UnlockUser from "../pages/authentication/unlockUser"
 import Forgetpwd from "../pages/authentication/forgetpwd"
 import Resetpwd from "../pages/authentication/resetpwd"
 
-// Comming soo
-import Comingsoon from "../pages/comingSoon/comingsoon"
-import ComingsoonImg from "../pages/comingSoon/comingsoonImg"
-import ComingsoonVideo from "../pages/comingSoon/comingsoonVideo"
-
 // Maintenanc
 import Maintenance from "../pages/maintenance"
 import Error400 from '../pages/errors/error400'
@@ -37,11 +32,6 @@ export const authRoutes = [
   { path: `${process.env.PUBLIC_URL}/pages/auth/forgetPwd`, Component: <Forgetpwd /> },
   { path: `${process.env.PUBLIC_URL}/pages/auth/unlockUser`, Component: <UnlockUser /> },
   { path: `${process.env.PUBLIC_URL}/pages/auth/resetPwd`, Component: <Resetpwd /> },
-
-  //Coming-soon
-  { path: `${process.env.PUBLIC_URL}/pages/comingsoon/comingsoon`, Component: <Comingsoon /> },
-  { path: `${process.env.PUBLIC_URL}/pages/comingsoon/comingsoonImg`, Component: <ComingsoonImg /> },
-  { path: `${process.env.PUBLIC_URL}/pages/comingsoon/comingsoonVideo`, Component: <ComingsoonVideo /> },
 
   { path: `${process.env.PUBLIC_URL}/pages/maintenance`, Component: <Maintenance /> },
 

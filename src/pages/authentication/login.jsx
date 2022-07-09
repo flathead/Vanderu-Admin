@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import { Container, Row, Col, Form, FormGroup, Input, Label, Button,NavItem, NavLink, Nav,TabContent,TabPane } from 'reactstrap'
 import {Twitter,Facebook,GitHub} from 'react-feather'
-import {Password,SignIn,EmailAddress,RememberPassword,ForgotPassword ,CreateAccount,FIREBASE,AUTH0,JWT,LoginWithJWT} from '../../constant';
 
 const Logins = (props) => {
 
@@ -33,49 +32,49 @@ const Logins = (props) => {
                   <NavItem>
                     <NavLink className={selected === 'firebase' ? 'active' : ''} onClick={() => setSelected('firebase')}>
                       <img src={require("../../assets/images/firebase.svg")} alt="" />
-                      <span>{FIREBASE}</span>
+                      <span>FIREBASE</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink className={selected === 'jwt' ? 'active' : ''} onClick={() => setSelected('jwt')}>
                     <img src={require("../../assets/images/jwt.svg")} alt="" />
-                    <span>{JWT}</span>
+                    <span>JWT</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink className={selected === 'auth0' ? 'active' : ''} onClick={() => setSelected('auth0')}>
                     <img src={require("../../assets/images/auth0.svg")} alt="" />
-                    <span>{AUTH0}</span>
+                    <span>AUTH0</span>
                     </NavLink>
                   </NavItem>
                 </Nav>
                 <TabContent activeTab={selected} className="content-login">
                   <TabPane  className="fade show" tabId={selected === "firebase" ? "firebase" : "jwt"}>
                     <Form className="theme-form">
-                      <h4>{selected === "firebase" ? "Sign In With Firebase" : "Sign In With Jwt"}</h4>
-                      <p>{"Enter your email & password to login"}</p>
+                      <h4>{selected === "firebase" ? "Логие с Firebase" : "Логин с Jwt"}</h4>
+                      <p>{"Введите ваш Email и пароль"}</p>
                       <FormGroup>
-                        <Label className="col-form-label">{EmailAddress}</Label>
+                        <Label className="col-form-label">Email</Label>
                         <Input className="form-control" type="email" required="" placeholder="Test@gmail.com"/>
                       </FormGroup>
                       <div className="mb-3 position-relative">
-                        <Label className="col-form-label">{Password}</Label>
+                        <Label className="col-form-label">Пароль</Label>
                         <Input className="form-control" type={togglePassword ?  "text" : "password" } name="login[password]" value={password} onChange={(e) => handleChange(e)} required="" placeholder="*********"/>
                         <div className="show-hide" onClick={() => HideShowPassword(togglePassword)}><span className={togglePassword ? "" : "show"}></span></div>
                       </div>
                       <div className="login-btn mb-0">
                         <div className="checkbox ms-3">
                           <Input id="checkbox1" type="checkbox"/>
-                          <Label className="text-muted" for="checkbox1">{RememberPassword}</Label>
+                          <Label className="text-muted" for="checkbox1">Забыли пароль?</Label>
                         </div>
-                        <a className="link" href="#javascript">{ForgotPassword}</a>
+                        <a className="link" href="#javascript">Забыли пароль?</a>
                         {selected === "firebase" ?
-                          <Button color="primary">{SignIn}</Button>
+                          <Button color="primary">Войти</Button>
                           :
-                          <Button color="primary">{LoginWithJWT}</Button>
+                          <Button color="primary">Логин с JWT</Button>
                         }
                       </div>
-                      <h6 className="text-muted mt-4 or">{"Or Sign in with"}</h6>
+                      <h6 className="text-muted mt-4 or">{"Либо, авторизуйтесь с"}</h6>
                       <div className="social mt-4">
                         <div className="btn-showcase">
                           <Button color="light">
@@ -92,15 +91,15 @@ const Logins = (props) => {
                           </Button>
                         </div>
                       </div>
-                      <p className="mt-4 mb-0">{"Don't have account?"}<a className="ms-2" href="#javascript">{CreateAccount}</a></p>
+                      <p className="mt-4 mb-0">{"Ещё нет аккаунта?"}<a className="ms-2" href="#javascript">Создать аккаунт</a></p>
                     </Form>
                   </TabPane>
                   <TabPane  className="fade show" tabId="auth0">
                   <div className="auth-content">
                       <img src={require("../../assets/images/auth-img.svg")} alt="" />
-                      <h4>{"Welcome to login with Auth0"}</h4>
+                      <h4>{"Логин с Auth0"}</h4>
                       <p>{"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"}</p>
-                      <Button color="info">{AUTH0}</Button> 
+                      <Button color="info">AUTH0</Button> 
                   </div>
                   </TabPane>
                 </TabContent>

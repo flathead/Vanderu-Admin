@@ -2,15 +2,11 @@ import React, { Fragment,useState,useEffect } from 'react';
 import Breadcrumb from '../../layout/breadcrumb'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col, Card, CardHeader, CardFooter, Media } from 'reactstrap'
-import {Follower,Following,TotalPost} from '../../constant'
 import axios from 'axios'
-import { classes } from '../../data/layouts';
 
 const UserCards = (props) => {
 
   const [cards,setCards] = useState([])
-  const defaultLayoutObj = classes.find(item => Object.values(item).pop(1) === 'compact-wrapper');
-  const layout = localStorage.getItem('layout') || Object.keys(defaultLayoutObj).pop();
 
   useEffect(() => {
     axios.get(`${process.env.PUBLIC_URL}/api/usercard.json`).then(res => setCards(res.data))
@@ -39,22 +35,22 @@ const UserCards = (props) => {
                 <li><a href="https://dashboard.rss.com/auth/sign-in/"><i className="fa fa-rss"></i></a></li>
               </ul>
               <div className="text-center profile-details">
-                <Link to={`${process.env.PUBLIC_URL}/app/users/userProfile/${layout}`}>
+                <Link to={`${process.env.PUBLIC_URL}/app/users/userProfile/`}>
                   <h4>{cardItem.name}</h4>
                 </Link>
                 <h6>{cardItem.post}</h6>
               </div>
               <CardFooter className="row">
                 <Col sm="4 col-4">
-                  <h6>{Follower}</h6>
+                  <h6>Подписчики</h6>
                   <h3 className="counter">{cardItem.follower}</h3>
                 </Col>
                 <Col sm="4 col-4">
-                  <h6>{Following}</h6>
+                  <h6>Слежу</h6>
                   <h3><span className="counter">{cardItem.following}</span>{"K"}</h3>
                 </Col>
                 <Col sm="4 col-4">
-                  <h6>{TotalPost}</h6>
+                  <h6>Всего постов</h6>
                   <h3><span className="counter">{cardItem.totalPost}</span>{"M"}</h3>
                 </Col>
               </CardFooter>

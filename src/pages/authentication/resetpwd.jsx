@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {Container,Row,Col,Form,FormGroup,Label,Input,Button} from 'reactstrap' 
-import { NewPassword,RetypePassword,Done, RememberPassword, CreateAccount} from "../../constant";
 
 const Resetpwd = (props) => {
 
@@ -25,22 +24,22 @@ const Resetpwd = (props) => {
                   <Form className="theme-form">
                     <h4>{"Create Your Password"}</h4>
                     <FormGroup>
-                      <Label className="col-form-label">{NewPassword}</Label>
+                      <Label className="col-form-label">Новый пароль</Label>
                       <Input className="form-control" type={togglePassword ?  "text" : "password" } name="login[password]" value={password} onChange={(e) => handleChange(e)} required="" placeholder="*********"/>
                       <div className="show-hide" onClick={() => HideShowPassword(togglePassword)}><span className={togglePassword ? "" : "show"}></span></div>
                     </FormGroup>
                     <FormGroup>
-                      <Label className="col-form-label">{RetypePassword}</Label>
+                      <Label className="col-form-label">Повторите пароль</Label>
                       <Input className="form-control" type="password" name="login[password]" required="" placeholder="*********"/>
                     </FormGroup>
                     <FormGroup className="mb-0">
                       <div className="checkbox ms-3">
                         <Input id="checkbox1" type="checkbox"/>
-                        <Label className="text-muted" for="checkbox1">{RememberPassword}</Label>
+                        <Label className="text-muted" for="checkbox1">Я забыл пароль</Label>
                       </div>
-                      <Button color="primary" type="submit">{Done}</Button>
+                      <Button color="primary" type="submit">Отправить</Button>
                     </FormGroup>
-                    <p className="mt-4 mb-0">{"Don't have account?"}<a className="ms-2" href="#javascript">{CreateAccount}</a></p>
+                    <p className="mt-4 mb-0">{"Don't have account?"}<a className="ms-2" href="#javascript">Создать аккаунт</a></p>
                   </Form>
                 </div>
               </div>

@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {Container,Row,Col,Form,FormGroup,Input,Label,Button} from 'reactstrap'
-import { Password,SignIn, EmailAddress ,CreateAccount, YourName, PrivacyPolicy} from '../../constant';
 import { GitHub, Twitter, Facebook } from 'react-feather';
 
 const RegisterWithBgImage = (props) => {
@@ -27,10 +26,10 @@ const RegisterWithBgImage = (props) => {
               <div><a className="logo" href="#javascript"><img className="img-fluid for-light" src={require("../../assets/images/logo/login.png")} alt="looginpage"/><img className="img-fluid for-dark" src={require("../../assets/images/logo/logo_dark.png")} alt="looginpage"/></a></div>
               <div className="login-main"> 
                 <Form className="theme-form">
-                  <h4>{"Create your account"}</h4>
-                  <p>{"Enter your personal details to create account"}</p>
+                  <h4>{"Создание аккаунта"}</h4>
+                  <p>{"Введите детали для создания аккаунта"}</p>
                   <FormGroup>
-                    <Label className="col-form-label pt-0">{YourName}</Label>
+                    <Label className="col-form-label pt-0">Ваше имя</Label>
                     <Row>
                       <Col xs="6">
                         <Input className="form-control" type="text" required="" placeholder="First name"/>
@@ -41,22 +40,22 @@ const RegisterWithBgImage = (props) => {
                     </Row>
                   </FormGroup>
                   <FormGroup>
-                    <Label className="col-form-label">{EmailAddress}</Label>
+                    <Label className="col-form-label">Email</Label>
                     <Input className="form-control" type="email" required="" placeholder="Test@gmail.com"/>
                   </FormGroup>
                   <FormGroup>
-                    <Label className="col-form-label">{Password}</Label>
+                    <Label className="col-form-label">Пароль</Label>
                     <Input className="form-control" type={togglePassword ?  "text" : "password" } name="login[password]" value={password} onChange={(e) => handleChange(e)} required="" placeholder="*********"/>
                     <div className="show-hide" onClick={() => HideShowPassword(togglePassword)}><span className={togglePassword ? "" : "show"}></span></div>
                   </FormGroup>
                   <FormGroup className="mb-0">
                     <div className="checkbox ms-3">
                       <Input id="checkbox1" type="checkbox"/>
-                      <Label className="text-muted" for="checkbox1">{"Agree with"}<a className="ms-2" href="#javascript">{PrivacyPolicy}</a></Label>
+                      <Label className="text-muted" for="checkbox1">{"Согласен с "}<a className="ms-2" href="#javascript">Политикой конфиденциальности</a></Label>
                     </div>
-                    <Button color="primary" type="submit">{CreateAccount}</Button>
+                    <Button color="primary" type="submit">Создать аккаунт</Button>
                   </FormGroup>
-                  <h6 className="text-muted mt-4 or">{"Or signup with"}</h6>
+                  <h6 className="text-muted mt-4 or">{"Либо, создайте аккаунт с"}</h6>
                   <div className="social mt-4">
                     <div className="btn-showcase">
                       <Button color="light">
@@ -73,7 +72,7 @@ const RegisterWithBgImage = (props) => {
                       </Button>
                     </div>
                   </div>
-                  <p className="mt-4 mb-0">{"Already have an account?"}<a className="ms-2" href="#javascript">{SignIn}</a></p>
+                  <p className="mt-4 mb-0">{"Уже есть аккаунт?"}<a className="ms-2" href="#javascript">Войти</a></p>
                 </Form>
               </div>
             </div>

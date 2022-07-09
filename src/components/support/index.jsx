@@ -1,13 +1,9 @@
 import React, { Fragment } from 'react';
 import Breadcrumb from '../../layout/breadcrumb'
 import { Container, Row, Col, Card, CardBody, Form, Input, CardFooter, Button, CardHeader } from 'reactstrap'
-import { classes } from '../../data/layouts';
 import { Link } from 'react-router-dom';
 
 const Support = () => {
-
-    const defaultLayoutObj = classes.find(item => Object.values(item).pop(1) === 'compact-wrapper');
-    const layout = localStorage.getItem('layout') || Object.keys(defaultLayoutObj).pop();
     
     return (
         <Fragment>
@@ -19,13 +15,13 @@ const Support = () => {
                             <Form>
                                 <CardHeader>
                                     <p>Есть проблемы или нужна помощь? Отправьте Ваше сообщение поддержке.</p>
-                                    <p>Почитайте <Link to={`${process.env.PUBLIC_URL}/faq/${layout}`}>ЧаВо</Link>, может решение Вашей проблемы уже существует.</p>
+                                    <p>Почитайте <Link to={`${process.env.PUBLIC_URL}/faq/`}>ЧаВо</Link>, может решение Вашей проблемы уже существует.</p>
                                 </CardHeader>
                                 <CardBody>
                                     <span>Сообщение:</span>
                                     <Input
                                     type="textarea"
-                                    maxlength="4090"
+                                    maxLength="4090"
                                     className="area"
                                     />
                                     <p>Не спамьте. Максимальное кол-во символов - 4090.</p>

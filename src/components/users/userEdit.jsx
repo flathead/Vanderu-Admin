@@ -1,15 +1,11 @@
 import React, { Fragment,useEffect,useState } from 'react';
 import Breadcrumb from '../../layout/breadcrumb'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col, Card, CardHeader, CardBody, CardFooter, Media, Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { Container, Row, Col, Card, CardHeader, CardBody, CardFooter, Media, Form, FormGroup, Label, Input } from 'reactstrap'
 import axios from 'axios'
-import { MyProfile,Bio,MarkJecno,Designer,Password,Website,Save,EditProfile,Company,Username,UsersCountryMenu,AboutMe,UpdateProfile,UsersTableTitle,FirstName,LastName,Address,EmailAddress,PostalCode,Country, UsersTableHeader,City,Edit,Update,Delete} from '../../constant';
-import { classes } from '../../data/layouts';
 const UserEdit = (props) => {
   
-  const [data,setData] = useState([])
-  const defaultLayoutObj = classes.find(item => Object.values(item).pop(1) === 'compact-wrapper');
-  const layout = localStorage.getItem('layout') || Object.keys(defaultLayoutObj).pop();
+  const [setData] = useState([])
 
   useEffect(() => {
       axios.get(`${process.env.PUBLIC_URL}/api/user-edit-table.json`).then(res => setData(res.data))
@@ -24,7 +20,7 @@ const UserEdit = (props) => {
             <Col xl="4">
               <Card>
                 <CardHeader>
-                  <h4 className="card-title mb-0">{MyProfile}</h4>
+                  <h4 className="card-title mb-0">Мой профиль</h4>
                   <div className="card-options">
                     <a className="card-options-collapse" href="#javascript">
                       <i className="fe fe-chevron-up"></i>
@@ -41,32 +37,32 @@ const UserEdit = (props) => {
                         <div className="media">
                             <Media className="img-70 rounded-circle" alt="" src={require("../../assets/images/user/7.jpg")} />
                             <div className="media-body">
-                              <Link to={`${process.env.PUBLIC_URL}/app/users/userProfile/${layout}`}>
-                                <h5 className="mb-1">{MarkJecno}</h5>
+                              <Link to={`${process.env.PUBLIC_URL}/app/users/userProfile/`}>
+                                <h5 className="mb-1">Иван Иванов</h5>
                               </Link>
-                              <p>{Designer}</p>
+                              <p>Дизайнер</p>
                             </div>
                         </div>
                       </div>
                     </Row>
                     <FormGroup>
-                      <h6 className="form-label">{Bio}</h6>
+                      <h6 className="form-label">Био</h6>
                       <Input type="textarea" className="form-control" rows="5" defaultValue="On the other hand, we denounce with righteous indignation" />
                     </FormGroup>
                     <FormGroup>
-                      <Label className="form-label">{EmailAddress}</Label>
+                      <Label className="form-label">Email</Label>
                       <Input className="form-control" placeholder="your-email@domain.com" />
                     </FormGroup>
                     <FormGroup>
-                      <Label className="form-label">{Password}</Label>
+                      <Label className="form-label">Пароль</Label>
                       <Input className="form-control" type="password" defaultValue="password" />
                     </FormGroup>
                     <FormGroup>
-                      <Label className="form-label">{Website}</Label>
+                      <Label className="form-label">Сайт</Label>
                       <Input className="form-control" placeholder="http://Uplor .com" />
                     </FormGroup>
                     <div className="form-footer">
-                      <button className="btn btn-primary">{Save}</button>
+                      <button className="btn btn-primary">Сохранить</button>
                     </div>
                   </Form>
                 </CardBody>
@@ -75,7 +71,7 @@ const UserEdit = (props) => {
             <Col xl="8">
               <Form className="card">
                 <CardHeader>
-                  <h4 className="card-title mb-0">{EditProfile}</h4>
+                  <h4 className="card-title mb-0">Редактировать профиль</h4>
                   <div className="card-options">
                     <a className="card-options-collapse" href="#javascript">
                       <i className="fe fe-chevron-up"></i>
@@ -89,110 +85,64 @@ const UserEdit = (props) => {
                   <Row>
                     <Col md="5">
                       <FormGroup>
-                        <Label className="form-label">{Company}</Label>
-                        <Input className="form-control" type="text" placeholder="Company" />
+                        <Label className="form-label">Компания</Label>
+                        <Input className="form-control" type="text" placeholder="Компания" />
                       </FormGroup>
                     </Col>
                     <Col sm="6" md="3">
                       <FormGroup>
-                        <Label className="form-label">{Username}</Label>
-                        <Input className="form-control" type="text" placeholder="Username" />
+                        <Label className="form-label">Ник</Label>
+                        <Input className="form-control" type="text" placeholder="Ник" />
                       </FormGroup>
                     </Col>
                     <Col sm="6" md="4">
                       <FormGroup>
-                        <Label className="form-label">{EmailAddress}</Label>
+                        <Label className="form-label">Email</Label>
                         <Input className="form-control" type="email" placeholder="Email" />
                       </FormGroup>
                     </Col>
                     <Col sm="6" md="6">
                       <FormGroup>
-                        <Label className="form-label">{FirstName}</Label>
-                        <Input className="form-control" type="text" placeholder="Company" />
+                        <Label className="form-label">Имя</Label>
+                        <Input className="form-control" type="text" placeholder="Имя" />
                       </FormGroup>
                     </Col>
                     <Col sm="6" md="6">
                       <FormGroup>
-                        <Label className="form-label">{LastName}</Label>
-                        <Input className="form-control" type="text" placeholder="Last Name" />
+                        <Label className="form-label">Фамилия</Label>
+                        <Input className="form-control" type="text" placeholder="Фамилия" />
                       </FormGroup>
                     </Col>
                     <Col md="12">
                       <FormGroup>
-                        <Label className="form-label">{Address}</Label>
-                        <Input className="form-control" type="text" placeholder="Home Address" />
+                        <Label className="form-label">Адрес</Label>
+                        <Input className="form-control" type="text" placeholder="Адрес" />
                       </FormGroup>
                     </Col>
                     <Col sm="6" md="4">
                       <FormGroup>
-                        <Label className="form-label">{City}</Label>
-                        <Input className="form-control" type="text" placeholder="City" />
+                        <Label className="form-label">Город</Label>
+                        <Input className="form-control" type="text" placeholder="Город" />
                       </FormGroup>
                     </Col>
                     <Col sm="6" md="3">
                       <FormGroup>
-                        <Label className="form-label">{PostalCode}</Label>
-                        <Input className="form-control" type="number" placeholder="ZIP Code" />
-                      </FormGroup>
-                    </Col>
-                    <Col md="5">
-                      <FormGroup>
-                        <Label className="form-label">{Country}</Label>
-                        <Input type="select" name="select" className="form-control btn-square">
-                          {UsersCountryMenu.map((items,i) => 
-                            <option key={i}>{items}</option>
-                          )}
-                        </Input>
+                        <Label className="form-label">Индекс</Label>
+                        <Input className="form-control" type="number" placeholder="Индекс" />
                       </FormGroup>
                     </Col>
                     <Col md="12">
                       <div className="mb-0">
-                        <Label className="form-label">{AboutMe}</Label>
-                        <Input type="textarea" className="form-control" rows="5" placeholder="Enter About your description" />
+                        <Label className="form-label">Обо мне</Label>
+                        <Input type="textarea" className="form-control" rows="5" placeholder="Опишите себя" />
                       </div>
                     </Col>
                   </Row>
                 </CardBody>
                 <CardFooter className="text-end">
-                  <button className="btn btn-primary" type="submit">{UpdateProfile}</button>
+                  <button className="btn btn-primary" type="submit">Обновить профиль</button>
                 </CardFooter>
               </Form>
-            </Col>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <h4 className="card-title mb-0">{UsersTableTitle}</h4>
-                  <div className="card-options"><a className="card-options-collapse" href="#javascript" data-toggle="card-collapse"><i className="fe fe-chevron-up"></i></a><a className="card-options-remove" href="#javascript" data-toggle="card-remove"><i className="fe fe-x"></i></a></div>
-                </CardHeader>
-                <div className="table-responsive">
-                  <table className="table card-table table-vcenter text-nowrap">
-                    <thead>
-                      <tr>
-                        {UsersTableHeader.map((items,i) => 
-                          <th key={i}>{items}</th>
-                        )}
-                      </tr>
-                    </thead>
-                    <tbody>
-
-                      {data.map((items,i) => 
-                        <tr key={i}>
-                          <td><Link to={`${process.env.PUBLIC_URL}/project/project-list/${layout}`}>{items.projectName}</Link></td>
-                          <td>{items.date}</td>
-                          <td><span className="status-icon bg-success"></span>{items.status}</td>
-                          <td>{items.price}</td>
-                          <td className="text-end">
-                            <Button color="primary" size="sm"><i className="fa fa-pencil"></i> {Edit}</Button>
-                            <Button color="transparent" size="sm"><i className="fa fa-link"></i> {Update}</Button>
-                            <Button color="danger" size="sm"><i className="fa fa-trash"></i> {Delete}</Button>
-                          </td>
-                        </tr>
-                      )}
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </Card>
             </Col>
           </Row>
         </div>

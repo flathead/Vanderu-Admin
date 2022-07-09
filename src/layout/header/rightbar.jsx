@@ -1,13 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import man from '../../assets/images/dashboard/profile.jpg'
-import { FileText, LogIn, Mail, User, Bell, Maximize, Search } from 'react-feather';
+import {  LogIn, Mail, User, Bell, Maximize, Search } from 'react-feather';
 import { useNavigate } from 'react-router-dom'
 import { firebase_app } from '../../data/config'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
-import { useTranslation } from "react-i18next";
-import { Notification, DeliveryProcessing, OrderComplete, TicketsGenerated, DeliveryComplete, CheckAllNotification, Admin, Account, Inbox, Taskboard, LogOut } from '../../constant'
-import { classes } from '../../data/layouts';
 
 const Rightbar = () => {
 
@@ -17,7 +14,6 @@ const Rightbar = () => {
   const [searchresponsive, setSearchresponsive] = useState(false)
   const [setMoonlight] = useState(false)
   const [notificationDropDown, setNotificationDropDown] = useState(false)
-  const { i18n } = useTranslation();
   const { logout } = useAuth0()
   const authenticated = JSON.parse(localStorage.getItem("authenticated"));
   const auth0_profile = JSON.parse(localStorage.getItem("auth0_profile"))
@@ -28,7 +24,6 @@ const Rightbar = () => {
     if (localStorage.getItem("layout_version") === "dark-only") {
       setMoonlight(true)
     }
-    i18n.changeLanguage('ru');
   }, []);
 
   const Logout_From_Firebase = () => {
@@ -44,8 +39,6 @@ const Rightbar = () => {
     history(`${process.env.PUBLIC_URL}/login`)
     logout()
   }
-  const defaultLayoutObj = classes.find(item => Object.values(item).pop(1) === 'compact-wrapper');
-  const layout = localStorage.getItem('layout') || Object.keys(defaultLayoutObj).pop();
 
   const UserMenuRedirect = (redirect) => {
     history(redirect)
@@ -95,21 +88,21 @@ const Rightbar = () => {
           <li className="onhover-dropdown">
             <div className="notification-box" onClick={() => setNotificationDropDown(!notificationDropDown)}><Bell /><span className="badge rounded-pill badge-secondary">2</span></div>
             <div className={`notification-dropdown onhover-show-div ${notificationDropDown ? "active" : ""}`}>
-              <h6 className="f-18 mb-0 dropdown-title">{Notification}</h6>
+              <h6 className="f-18 mb-0 dropdown-title">Notification</h6>
               <ul>
                 <li className="b-l-primary border-4">
-                  <p>{DeliveryProcessing} <span className="font-danger">{"10 min."}</span></p>
+                  <p>Delivery processing <span className="font-danger">{"10 min."}</span></p>
                 </li>
                 <li className="b-l-success border-4">
-                  <p>{OrderComplete}<span className="font-success">{"1 hr"}</span></p>
+                  <p>Order Complete<span className="font-success">{"1 hr"}</span></p>
                 </li>
                 <li className="b-l-info border-4">
-                  <p>{TicketsGenerated}<span className="font-info">{"3 hr"}</span></p>
+                  <p>Tickets Generated<span className="font-info">{"3 hr"}</span></p>
                 </li>
                 <li className="b-l-warning border-4">
-                  <p>{DeliveryComplete}<span className="font-warning">{"6 hr"}</span></p>
+                  <p>Delivery Complete<span className="font-warning">{"6 hr"}</span></p>
                 </li>
-                <li><Link className="font-primary f-w-700" to={`${process.env.PUBLIC_URL}/app/ecommerce/orderhistory/${layout}`}>{CheckAllNotification}</Link>
+                <li><Link className="font-primary f-w-700" to={`${process.env.PUBLIC_URL}/app/ecommerce/orderhistory/`}>Check all notification</Link>
                 </li>
               </ul>
             </div>
@@ -121,14 +114,13 @@ const Rightbar = () => {
             <div className="media profile-media">
               <img className="b-r-10" src={authenticated ? auth0_profile.picture : profile} alt="" />
               <div className="media-body"><span>{authenticated ? auth0_profile.name : name}</span>
-                <p className="mb-0 font-roboto">{Admin} <i className="middle fa fa-angle-down"></i></p>
+                <p className="mb-0 font-roboto">Admin <i className="middle fa fa-angle-down"></i></p>
               </div>
             </div>
             <ul className="profile-dropdown onhover-show-div">
-              <li onClick={() => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/users/userProfile/${layout}`)}><User /><span>{Account} </span></li>
-              <li onClick={() => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/email-app/${layout}`)}><Mail /><span>{Inbox}</span></li>
-              <li onClick={() => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/todo-app/todo/${layout}`)}><FileText /><span>{Taskboard}</span></li>
-              <li onClick={authenticated ? Logout_From_Auth0 : Logout_From_Firebase}><LogIn /><span>{LogOut}</span></li>
+              <li onClick={() => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/users/userProfile/`)}><User /><span>Аккаунт </span></li>
+              <li onClick={() => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/email-app/`)}><Mail /><span>Почта</span></li>
+              <li onClick={authenticated ? Logout_From_Auth0 : Logout_From_Firebase}><LogIn /><span>Выйти</span></li>
             </ul>
           </li>
         </ul>

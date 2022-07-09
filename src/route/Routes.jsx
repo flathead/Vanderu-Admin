@@ -1,335 +1,58 @@
-// dashbaord
+// Dashbaord
 import Default from '../components/dashboard/default'
-
-//import Ecommerce from '../components/dashboard/ecommerce'
-
-// widgets
-//import GeneralWidget from '../components/widgets/general'
-//import ChartsWidget from '../components/widgets/charts'
-
-// ui-kits
-import StateColor from '../components/ui-kits/statecolor'
-import Typography from '../components/ui-kits/typography'
-import Avatars from '../components/ui-kits/avatars'
-import HelperClasses from '../components/ui-kits/helperClasses'
-import Grid from '../components/ui-kits/grid'
-import TagAndPills from '../components/ui-kits/tagAndPills'
-import Progress from '../components/ui-kits/progress'
-import Modal from '../components/ui-kits/modal'
-import Alert from '../components/ui-kits/alert'
-import Popover from '../components/ui-kits/popover'
-import Tooltip from '../components/ui-kits/tooltip'
-import Spinner from '../components/ui-kits/spinner'
-import Dropdown from '../components/ui-kits/dropDown'
-import TabBootstrap from '../components/ui-kits/tabs/tabBootstrap'
-import TabLine from '../components/ui-kits/tabs/tabLine'
-import Accordian from '../components/ui-kits/accordian'
-import Shadow from '../components/ui-kits/shadow'
-import List from '../components/ui-kits/list'
-
-// bonus-ui
-import Scrolling from '../components/bonus_ui/scrolling'
-import BootstrapNotify from '../components/bonus_ui/bootstrapNotify'
-import Rating from '../components/bonus_ui/rating'
-import Dropzone from '../components/bonus_ui/dropzone'
-import SweetAlert from '../components/bonus_ui/sweetAlert'
-import Tour from '../components/bonus_ui/tour'
-import Sticky from '../components/bonus_ui/sticky'
-import Breadcrumb from '../components/bonus_ui/breadcrumb'
-import Imagecrop from '../components/bonus_ui/imagecrop'
-import RangeSlider from '../components/bonus_ui/rangeSlider'
-import Carousel from '../components/bonus_ui/carousel'
-import Ribbons from '../components/bonus_ui/ribbons'
-import Pagination from '../components/bonus_ui/pagination'
-import DragAndDrop from '../components/bonus_ui/dragAndDrop'
-import UploadImage from '../components/bonus_ui/uploadImage'
-
-// Cards
-import BasicCards from '../components/bonus_ui/cards/basicCards'
-import ThemeCards from '../components/bonus_ui/cards/themeCards'
-import TabCard from '../components/bonus_ui/cards/tabCard'
-import DraggingCards from '../components/bonus_ui/cards/draggingCards'
-
-// Timeline
-import Timeline1 from '../components/bonus_ui/timelines/timeline'
-
-// Icons
-import FlagIcons from '../components/icons/flagIcons'
-import FontAwsomeIcon from '../components/icons/fontAwsomeIcon'
-import IcoIcons from '../components/icons/icoIcons'
-import ThemifyIcons from '../components/icons/themifyIcons'
-import FeatherIcons from '../components/icons/featherIcons'
-import WeatherIcons from '../components/icons/weatherIcons'
-
-// Buttons 
-import DefaultButton from '../components/buttons/default-Button'
-import EdgeButton from '../components/buttons/edgeButton'
-import FlatButton from '../components/buttons/flatButton'
-import GroupButton from '../components/buttons/groupButton'
-import RaisedButton from '../components/buttons/raisedButton'
-
-
-// Forms
-import FormValidation from '../components/forms/form-control/form-validation'
-import BaseInput from '../components/forms/form-control/baseInput'
-import InputGroup from '../components/forms/form-control/inputGroup'
-import MegaOption from '../components/forms/form-control/megaOption'
-
-// Form Layout
-import FormDefault from '../components/forms/form-layout/formDefault'
-import FormWizard1 from '../components/forms/form-layout/form-wizard-1/formwizard1'
-
-// Forms widgets
-import Datepicker from '../components/forms/form-widget/datepicker'
-import Timepicker from '../components/forms/form-widget/timepickerComponent/timepicker'
-import Typeahead from '../components/forms/form-widget/typeaheadComponent/typeahead'
-
-
-// Tabels
-import BasicTabels from '../components/tables/basicTable'
-import BorderTable from '../components/tables/borderTable'
-import SizingTable from '../components/tables/sizingTable'
-import StylingTable from '../components/tables/stylingTable'
-import DataTable from '../components/tables/dataTable'
-
-// Gallary
-import ImageGallery from "../components/gallery/imageGallery"
-import ImageWithDesc from "../components/gallery/imageWithDesc"
-import MesonryGallery from "../components/gallery/mesonryGallery"
-import MesonryDesc from "../components/gallery/mesonryDesc"
-import ImageHover from "../components/gallery/imageHover"
-
-// Blog
-//import BlogDetail from "../components/blog/blogDetail"
-//import BlogSingle from "../components/blog/blogSingle"
-//import BlogPost from "../components/blog/blogPost"
-
-// Job Search 
-//import CardView from "../components/jobSearch/cardView"
-//import JobList from "../components/jobSearch/job-list"
-//import JobDetail from "../components/jobSearch/job-detail"
-//import JobApply from "../components/jobSearch/job-apply"
-
-// Learning
-//import Learninglist from "../components/learning/learning-list"
-//import LearningDeatil from "../components/learning/learning-deatil"
-
-
-
-// Calendar
-//import BasicCalender from "../components/calendar/basicCalendar"
 
 // Users
 import UserProfile from "../components/users/userProfile"
 import UserEdit from "../components/users/userEdit"
 import UserCards from "../components/users/userCards"
 
-// Maps
-//import GoogleMap from "../components/map/googleMap"
+/*
+ * Pages
+ */
 
-// Editor
-//import CkEditor from "../components/editor/ckEditor"
-//import MdeEditor from "../components/editor/mdeEditor"
-
-// Social App 
-//import SocialApp from "../components/social-app"
-
-// FAQ page 
+// FAQ 
 import FaqComponent from "../components/faq"
 
-// knowledgebase page 
-//import KnowledgebaseComponent from "../components/knowledgebase"
-
-// Support
+// Поддержка
 import Support from "../components/support"
 
-// Support Ticket
-//import SupportTicket from "../components/support-ticket"
-
-// Sample page 
-//import Sample from "../components/sample"
-
-// Search page 
-//import Search from "../components/search"
-
-// Partnership
+// Партнёрство
 import Partnership from '../components/partnership'
 
+// Проект / создание проекта / внутренняя страница проекта 
+import ProjectList from '../components/project/project'
+import NewProject from '../components/project/new-project'
+import InsideProject from '../components/project/inside-project'
 
+// Тарифы (оплата сервиса)
+import Tariffs from '../components/tariffs/tariffs'
 
+// Рассылка
+import Spam from '../components/spam'
 
-// Email
-//import Email from "../components/application/email-app/emailDefault"
-
-// Chat 
-//import Chat from "../components/application/chat-app"
-
-// Bookmark
-//import Bookmark from "../components/application/bookmark"
-
-// Project app 
-import ProjectList from '../components/application/project/project'
-import NewProject from '../components/application/project/new-project'
-
-// New Pages
-import Tariffs from '../components/application/tariffs/tariffs'
-
-// File Manager App 
-//import FileManager from '../components/application/file-manager/file-manager'
-
-// Kanban Board
-//import KanbanBoard from '../components/application/kanban-board/kanbanBoard'
-
-// Task 
-//import TaskApp from "../components/application/task-app"
-
-// Contact app
-//import ContactApp from "../components/application/contact-app"
-
-// todo-app
-//import Todo from "../components/application/todo-app"
-
-// todo-firebase-app
-//import TodoFirebase from "../components/application/todo-firebase-app"
-//import LeafletMapContain from '../components/map/LeafletMap'
-import Spam from '../components/application/spam'
+// Статистика
 import Statistic from '../components/statistic'
+
+// Платёжные системы
 import Pay from '../components/pay'
-import InsideProject from '../components/application/project/inside-project'
-
-
 
 export const routes = [
 
-        // Страницы
-        { path: `${process.env.PUBLIC_URL}/dashboard/:layout/`, Component: <Default /> },
-        { path: `${process.env.PUBLIC_URL}/pay/:layout`, Component: <Pay /> },
-        { path: `${process.env.PUBLIC_URL}/project/inside/:layout`, Component: <InsideProject /> },
-        { path: `${process.env.PUBLIC_URL}/statistic/:layout`, Component: <Statistic /> },
-        { path: `${process.env.PUBLIC_URL}/tariff/:layout`, Component: <Tariffs /> },
-        { path: `${process.env.PUBLIC_URL}/support/:layout`, Component: <Support /> },
-        { path: `${process.env.PUBLIC_URL}/partnership/:layout`, Component: <Partnership /> },
-        { path: `${process.env.PUBLIC_URL}/mailing/:layout`, Component: <Spam /> },
-        { path: `${process.env.PUBLIC_URL}/project/project-list/:layout`, Component: <ProjectList /> },
-        { path: `${process.env.PUBLIC_URL}/project/new-project/:layout`, Component: <NewProject /> },
-        { path: `${process.env.PUBLIC_URL}/faq/:layout`, Component: <FaqComponent /> },
+	// Страницы
+	{ path: `${process.env.PUBLIC_URL}/dashboard/`, Component: <Default /> },
+	{ path: `${process.env.PUBLIC_URL}/pay/`, Component: <Pay /> },
+	{ path: `${process.env.PUBLIC_URL}/project/inside/`, Component: <InsideProject /> },
+	{ path: `${process.env.PUBLIC_URL}/statistic/`, Component: <Statistic /> },
+	{ path: `${process.env.PUBLIC_URL}/tariff/`, Component: <Tariffs /> },
+	{ path: `${process.env.PUBLIC_URL}/support/`, Component: <Support /> },
+	{ path: `${process.env.PUBLIC_URL}/partnership/`, Component: <Partnership /> },
+	{ path: `${process.env.PUBLIC_URL}/mailing/`, Component: <Spam /> },
+	{ path: `${process.env.PUBLIC_URL}/project/project-list/`, Component: <ProjectList /> },
+	{ path: `${process.env.PUBLIC_URL}/project/new-project/`, Component: <NewProject /> },
+	{ path: `${process.env.PUBLIC_URL}/faq/`, Component: <FaqComponent /> },
 
-        { path: `${process.env.PUBLIC_URL}/app/users/userProfile/:layout`, Component: <UserProfile /> },
-        { path: `${process.env.PUBLIC_URL}/app/users/userEdit/:layout`, Component: <UserEdit /> },
-        { path: `${process.env.PUBLIC_URL}/app/users/userCards/:layout`, Component: <UserCards /> },
-        
-        
-        
-
-        //{ path: `${process.env.PUBLIC_URL}/app/blog/blogDetail/:layout`, Component: <BlogDetail /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/blog/blogSingle/:layout`, Component: <BlogSingle /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/blog/blogPost/:layout`, Component: <BlogPost /> },
-
-        //{ path: `${process.env.PUBLIC_URL}/app/jobSearch/cardView/:layout`, Component: <CardView /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/jobSearch/job-list/:layout`, Component: <JobList /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/jobSearch/job-detail/:layout`, Component: <JobDetail /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/jobSearch/job-apply/:layout`, Component: <JobApply /> },
-
-        //{ path: `${process.env.PUBLIC_URL}/app/learning/learning-list/:layout`, Component: <Learninglist /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/learning/learning-detail/:layout`, Component: <LearningDeatil /> },
-
-        
-
-        //{ path: `${process.env.PUBLIC_URL}/app/calendar/basic-calendar/:layout`, Component: <BasicCalender /> },
-
-        //{ path: `${process.env.PUBLIC_URL}/app/map/googleMap/:layout`, Component: <GoogleMap /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/map/leafletMap/:layout`, Component: <LeafletMapContain /> },
-
-//{ path: `${process.env.PUBLIC_URL}/app/editor/ckEditor/:layout`, Component: <CkEditor /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/editor/mdeEditor/:layout`, Component: <MdeEditor /> },
-
-        //{ path: `${process.env.PUBLIC_URL}/app/social-app/:layout`, Component: <SocialApp /> },
-        //,
-        //{ path: `${process.env.PUBLIC_URL}/app/knowledgebase/:layout`, Component: <KnowledgebaseComponent /> },
-        
-        //{ path: `${process.env.PUBLIC_URL}/app/support-ticket/:layout`, Component: <SupportTicket /> },
-
-
-        
-
-
-        
-
-        //{ path: `${process.env.PUBLIC_URL}/app/file-manager/:layout`, Component: <FileManager /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/kanban-board/:layout`, Component: <KanbanBoard /> },
-
-        //{ path: `${process.env.PUBLIC_URL}/app/contact/:layout`, Component: <ContactApp /> },
-
-        //{ path: `${process.env.PUBLIC_URL}/app/todo-app/todo/:layout`, Component: <Todo /> },
-        //{ path: `${process.env.PUBLIC_URL}/app/todo-app/todo-firebase/:layout`, Component: <TodoFirebase /> },
-
-        // Компоненты и UI-фичи
-        { path: `${process.env.PUBLIC_URL}/app/gallery/imageGallery/:layout`, Component: <ImageGallery /> },
-        { path: `${process.env.PUBLIC_URL}/app/gallery/imageWithDesc/:layout`, Component: <ImageWithDesc /> },
-        { path: `${process.env.PUBLIC_URL}/app/gallery/mesonryGallery/:layout`, Component: <MesonryGallery /> },
-        { path: `${process.env.PUBLIC_URL}/app/gallery/mesonryDesc/:layout`, Component: <MesonryDesc /> },
-        { path: `${process.env.PUBLIC_URL}/app/gallery/imageHover/:layout`, Component: <ImageHover /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/statecolor/:layout`, Component: <StateColor /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/typography/:layout`, Component: <Typography /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/avatar/:layout`, Component: <Avatars /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/helperclass/:layout`, Component: <HelperClasses /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/grid/:layout`, Component: <Grid /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/tagsandpills/:layout`, Component: <TagAndPills /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/progress-bar/:layout`, Component: <Progress /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/modal/:layout`, Component: <Modal /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/alert/:layout`, Component: <Alert /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/popover/:layout`, Component: <Popover /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/tooltips/:layout`, Component: <Tooltip /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/spinner/:layout`, Component: <Spinner /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/dropdown/:layout`, Component: <Dropdown /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/tab-bootstrap/:layout`, Component: <TabBootstrap /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/tab-line/:layout`, Component: <TabLine /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/accordion/:layout`, Component: <Accordian /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/shadow/:layout`, Component: <Shadow /> },
-        { path: `${process.env.PUBLIC_URL}/ui-kits/list/:layout`, Component: <List /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/scrollable/:layout`, Component: <Scrolling /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/bootstrap-notify/:layout`, Component: <BootstrapNotify /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/rating/:layout`, Component: <Rating /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/dropzone/:layout`, Component: <Dropzone /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/sweetAlert/:layout`, Component: <SweetAlert /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/tourComponent/:layout`, Component: <Tour /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/stickyNotes/:layout`, Component: <Sticky /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/breadcrumb/:layout`, Component: <Breadcrumb /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/imageCropper/:layout`, Component: <Imagecrop /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/rangeSlider/:layout`, Component: <RangeSlider /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/carousel/:layout`, Component: <Carousel /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/ribbons/:layout`, Component: <Ribbons /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/pagination/:layout`, Component: <Pagination /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/dragNDropComp/:layout`, Component: <DragAndDrop /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/image-upload/:layout`, Component: <UploadImage /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/card/basicCards/:layout`, Component: <BasicCards /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/card/creativeCards/:layout`, Component: <ThemeCards /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/card/tabCard/:layout`, Component: <TabCard /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/card/draggingCards/:layout`, Component: <DraggingCards /> },
-        { path: `${process.env.PUBLIC_URL}/bonus-ui/timelines/timeline1/:layout`, Component: <Timeline1 /> },
-        { path: `${process.env.PUBLIC_URL}/icons/flagIcons/:layout`, Component: <FlagIcons /> },
-        { path: `${process.env.PUBLIC_URL}/icons/fontAwsomeIcon/:layout`, Component: <FontAwsomeIcon /> },
-        { path: `${process.env.PUBLIC_URL}/icons/icoIcons/:layout`, Component: <IcoIcons /> },
-        { path: `${process.env.PUBLIC_URL}/icons/featherIcons/:layout`, Component: <FeatherIcons /> },
-        { path: `${process.env.PUBLIC_URL}/icons/themifyIcons/:layout`, Component: <ThemifyIcons /> },
-        { path: `${process.env.PUBLIC_URL}/icons/weatherIcons/:layout`, Component: <WeatherIcons /> },
-        { path: `${process.env.PUBLIC_URL}/buttons/default-btn/:layout`, Component: <DefaultButton /> },
-        { path: `${process.env.PUBLIC_URL}/buttons/flatBtn/:layout`, Component: <FlatButton /> },
-        { path: `${process.env.PUBLIC_URL}/buttons/edgeBtn/:layout`, Component: <EdgeButton /> },
-        { path: `${process.env.PUBLIC_URL}/buttons/raisedBtn/:layout`, Component: <RaisedButton /> },
-        { path: `${process.env.PUBLIC_URL}/buttons/groupBtn/:layout`, Component: <GroupButton /> },
-        { path: `${process.env.PUBLIC_URL}/forms/form-validation/:layout`, Component: <FormValidation /> },
-        { path: `${process.env.PUBLIC_URL}/forms/baseInput/:layout`, Component: <BaseInput /> },
-        { path: `${process.env.PUBLIC_URL}/forms/inputGroup/:layout`, Component: <InputGroup /> },
-        { path: `${process.env.PUBLIC_URL}/forms/megaOptions/:layout`, Component: <MegaOption /> },
-        { path: `${process.env.PUBLIC_URL}/form-layout/formDefault/:layout`, Component: <FormDefault /> },
-        { path: `${process.env.PUBLIC_URL}/form-layout/formWizard/:layout`, Component: <FormWizard1 /> },
-        { path: `${process.env.PUBLIC_URL}/form-widget/datepicker/:layout`, Component: <Datepicker /> },
-        { path: `${process.env.PUBLIC_URL}/form-widget/timepicker/:layout`, Component: <Timepicker /> },
-        { path: `${process.env.PUBLIC_URL}/form-widget/typeahead/:layout`, Component: <Typeahead /> },
-        { path: `${process.env.PUBLIC_URL}/table/basic/:layout`, Component: <BasicTabels /> },
-        { path: `${process.env.PUBLIC_URL}/table/border/:layout`, Component: <BorderTable /> },
-        { path: `${process.env.PUBLIC_URL}/table/sizing/:layout`, Component: <SizingTable /> },
-        { path: `${process.env.PUBLIC_URL}/table/styling/:layout`, Component: <StylingTable /> },
-        { path: `${process.env.PUBLIC_URL}/table/datatable/:layout`, Component: <DataTable /> },
+	// Пользователь
+	{ path: `${process.env.PUBLIC_URL}/app/users/userProfile/`, Component: <UserProfile /> },
+	{ path: `${process.env.PUBLIC_URL}/app/users/userEdit/`, Component: <UserEdit /> },
+	{ path: `${process.env.PUBLIC_URL}/app/users/userCards/`, Component: <UserCards /> },
 ]

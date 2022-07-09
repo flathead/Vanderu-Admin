@@ -15,7 +15,6 @@ import { authRoutes } from './AuthRoutes';
 import LayoutRoutes from './LayoutRoutes';
 import Signin from '../auth/signin';
 import PrivateRoute from './PrivateRoute';
-import { classes } from '../data/layouts';
 
 // setup fake backend
 configureFakeBackend();
@@ -25,8 +24,6 @@ const Routers = () => {
         const [currentUser, setCurrentUser] = useState(false);
         const [authenticated, setAuthenticated] = useState(false)
         const jwt_token = localStorage.getItem('token');
-        const defaultLayoutObj = classes.find(item => Object.values(item).pop(1) === 'compact-wrapper');
-        const layout = localStorage.getItem('layout') || Object.keys(defaultLayoutObj).pop();
 
         useEffect(() => {
                 const requestOptions = { method: 'GET', headers: authHeader() };
@@ -52,7 +49,7 @@ const Routers = () => {
                                                                 <>
                                                                         <Route exact
                                                                                 path={`${process.env.PUBLIC_URL}`}
-                                                                                element={<Navigate to={`${process.env.PUBLIC_URL}/dashboard/${layout}`} />}
+                                                                                element={<Navigate to={`${process.env.PUBLIC_URL}/dashboard/`} />}
                                                                         />
                                                                 </> : ''}
                                                         <Route path={`/*`} element={<LayoutRoutes />} />

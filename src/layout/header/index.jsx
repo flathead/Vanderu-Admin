@@ -5,17 +5,11 @@ import { MENUITEMS } from '../sidebar/menu';
 import LeftHeader from './leftbar';
 import RightHeader from './rightbar';
 import { Link } from 'react-router-dom';
-import { Loading } from '../../constant';
-import { useSelector } from 'react-redux';
-import { DefaultLayout } from '../theme-customizer';
 
 const Header = () => {
 
     const mainmenu = MENUITEMS;
     const [searchValue, setsearchValue] = useState('');
-    const layout_type = useSelector(content => content.Customizer.layout)
-    // const layout_version = useSelector(content => content.Customizer.customizer.color.mix_background_layout);
-    const defaultLayout = Object.keys(DefaultLayout);
 
     const escFunction = useCallback((event) => {
         if (event.keyCode === 27) {
@@ -75,7 +69,7 @@ const Header = () => {
     const addFix = () => {
         document.querySelector(".Typeahead-menu").classList.add('is-open');
         // document.body.classList.add(`${layout_version}`);
-        document.body.classList.add(`${layout_type}`);
+        //document.body.classList.add(`${layout_type}`);
         document.body.classList.add('offcanvas')
     }
 
@@ -83,7 +77,7 @@ const Header = () => {
         setsearchValue('')
         document.querySelector(".Typeahead-menu").classList.remove('is-open');
         // document.body.classList.add(`${layout_version}`);
-        document.body.classList.add(`${layout_type}`);
+        //document.body.classList.add(`${layout_type}`);
         document.body.classList.remove('offcanvas')
     }
 
@@ -104,7 +98,7 @@ const Header = () => {
                                         onChange={(e) => handleSearchKeyword(e.target.value)}
                                     />
                                     <div className="spinner-border Typeahead-spinner" role="status">
-                                        <span className="sr-only">{Loading}</span>
+                                        <span className="sr-only">Загрузка</span>
                                     </div><X className="close-search" onClick={() => document.querySelector(".search-full").classList.remove("open")} />
                                 </div>
                                 <div className="Typeahead-menu custom-scrollbar" id="search-outer">
@@ -118,7 +112,7 @@ const Header = () => {
                                                     <div className="ProfileCard-details">
                                                         <div className="ProfileCard-realName">
                                                             <Link
-                                                                to={data.path + '/' + defaultLayout}
+                                                                to={data.path + '/' /* + defaultLayout */}
                                                                 className="realname"
                                                                 onClick={removeFix}
                                                             >

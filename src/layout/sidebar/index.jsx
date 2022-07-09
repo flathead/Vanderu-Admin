@@ -1,22 +1,16 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { useSelector } from 'react-redux'
+//import { useSelector } from 'react-redux'
 import { MENUITEMS } from './menu';
 import { ArrowRight, ArrowLeft, Grid } from 'react-feather';
 import { Link } from 'react-router-dom'
 import configDB from '../../data/customizer/config';
-import { DefaultLayout } from '../theme-customizer';
-import { useTranslation } from 'react-i18next';
 
 const Sidebar = () => {
-  const id = window.location.pathname.split('/').pop()
-  const defaultLayout = Object.keys(DefaultLayout);
-  const layout = id ? id : defaultLayout
   const [mainmenu, setMainMenu] = useState(MENUITEMS);
   const [margin, setMargin] = useState(0);
   const [width, setWidth] = useState(0);
-  const { t } = useTranslation();
   const [sidebartoogle, setSidebartoogle] = useState(true)
-  const wrapper = useSelector(content => content.Customizer.sidebar_types.type) || configDB.data.settings.sidebar.type;
+  //const wrapper = useSelector(content => content.Customizer.sidebar_types.type) || configDB.data.settings.sidebar.type;
   const handleScroll = () => {
     if (window.scrollY > 400) {
       if (configDB.data.settings.sidebar.type.split(' ').pop() === 'material-type' || configDB.data.settings.sidebar.type.split(' ').pop() === 'advance-layout')
@@ -63,7 +57,7 @@ const Sidebar = () => {
       window.removeEventListener('resize', handleResize)
     }
 
-  }, [layout, mainmenu]);
+  }, [mainmenu]);
 
   const handleResize = () => {
     setWidth(window.innerWidth - 500);
@@ -202,19 +196,18 @@ const Sidebar = () => {
       <div className={`bg-overlay1`} onClick={() => { closeOverlay() }} ></div>
       <div className="sidebar-wrapper" id="sidebar-wrapper" >
         <div className="logo-wrapper">
-          <Link to={`${process.env.PUBLIC_URL}/dashboard/${layout}`}>
+          <Link to={`${process.env.PUBLIC_URL}/dashboard/`}>
             <img className="img-fluid for-light" src={require("../../assets/images/logo/logo.png")} alt="" />
-            <img className="img-fluid for-dark" src={require("../../assets/images/logo/logo_dark.png")} alt="" />
           </Link>
           <div className="back-btn" onClick={() => responsiveSidebar()}><i className="fa fa-angle-left"></i></div>
           <div className="toggle-sidebar" onClick={() => openCloseSidebar(sidebartoogle)}><Grid className="status_toggle middle sidebar-toggle" /></div>
         </div>
         <div className="logo-icon-wrapper">
-          <Link to={`${process.env.PUBLIC_URL}/dashboard/${layout}`}><img className="img-fluid" src={require("../../assets/images/logo/logo-icon.png")} alt="" /></Link>
+          <Link to={`${process.env.PUBLIC_URL}/dashboard/`}><img className="img-fluid" src={require("../../assets/images/logo/logo-icon.png")} alt="" /></Link>
         </div>
         <nav className="sidebar-main" id="sidebar-main">
           <div className="left-arrow" onClick={scrollToLeft}><ArrowLeft /></div>
-          <div id="sidebar-menu" style={wrapper.split(' ').includes('horizontal-wrapper') ? { 'marginLeft': margin + 'px' } : { margin: '0px' }}>
+          <div id="sidebar-menu">
             <ul className="sidebar-links custom-scrollbar" >
               <li className="back-btn">
                 <div className="mobile-back text-end"><span>{"Back"}</span><i className="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
@@ -224,8 +217,8 @@ const Sidebar = () => {
                   <Fragment key={i}>
                     <li className="sidebar-main-title">
                       <div>
-                        <h6 className="lan-1">{t(Item.menutitle)}</h6>
-                        <p className="lan-2">{t(Item.menucontent)}</p>
+                        <h6 className="lan-1">{(Item.menutitle)}</h6>
+                        <p className="lan-2">{(Item.menucontent)}</p>
                       </div>
                     </li>
                     {Item.Items.map((menuItem, i) =>
@@ -233,7 +226,7 @@ const Sidebar = () => {
                         {(menuItem.type === 'sub') ?
                           <a href="javascript" className={`sidebar-link sidebar-title ${menuItem.active ? 'active' : ''}`} onClick={(event) => { event.preventDefault(); setNavActive(menuItem); activeClass(menuItem.active) }}>
                             <menuItem.icon />
-                            <span>{t(menuItem.title)}</span>
+                            <span>{(menuItem.title)}</span>
                             {menuItem.badge ? <label className={menuItem.badge}>{menuItem.badgetxt}</label> : ""}
                             <div className="according-menu">
                               {menuItem.active ?
@@ -245,9 +238,9 @@ const Sidebar = () => {
                           : ''}
 
                         {(menuItem.type === 'link') ?
-                          <Link to={menuItem.path + '/' + layout} className={`sidebar-link sidebar-title link-nav  ${menuItem.active ? 'active' : ''}`} onClick={() => toggletNavActive(menuItem)}>
+                          <Link to={menuItem.path + '/'} className={`sidebar-link sidebar-title link-nav  ${menuItem.active ? 'active' : ''}`} onClick={() => toggletNavActive(menuItem)}>
                             <menuItem.icon />
-                            <span>{t(menuItem.title)}</span>
+                            <span>{(menuItem.title)}</span>
                             {menuItem.badge ? <label className={menuItem.badge}>{menuItem.badgetxt}</label> : ""}
                           </Link>
                           : ''}
@@ -262,7 +255,7 @@ const Sidebar = () => {
                               return (
                                 <li key={index}>
                                   {(childrenItem.type === 'sub') ?
-                                    <a href="javascript" className={`${childrenItem.active ? 'active' : ''}`} onClick={(event) => { event.preventDefault(); toggletNavActive(childrenItem) }}>{t(childrenItem.title)}
+                                    <a href="javascript" className={`${childrenItem.active ? 'active' : ''}`} onClick={(event) => { event.preventDefault(); toggletNavActive(childrenItem) }}>{(childrenItem.title)}
                                       <span className="sub-arrow">
                                         <i className="fa fa-chevron-right"></i>
                                       </span>
@@ -276,7 +269,7 @@ const Sidebar = () => {
                                     : ''}
 
                                   {(childrenItem.type === 'link') ?
-                                    <Link to={childrenItem.path + '/' + layout} className={`${childrenItem.active ? 'active' : ''}`} onClick={() => toggletNavActive(childrenItem)}>{t(childrenItem.title)}</Link>
+                                    <Link to={childrenItem.path + '/'} className={`${childrenItem.active ? 'active' : ''}`} onClick={() => toggletNavActive(childrenItem)}>{(childrenItem.title)}</Link>
                                     : ''}
 
                                   {childrenItem.children ?
@@ -286,7 +279,7 @@ const Sidebar = () => {
                                       {childrenItem.children.map((childrenSubItem, key) =>
                                         <li key={key}>
                                           {(childrenSubItem.type === 'link') ?
-                                            <Link to={childrenSubItem.path + '/' + layout} className={`${childrenSubItem.active ? 'active' : ''}`} onClick={() => toggletNavActive(childrenSubItem)}>{t(childrenSubItem.title)}</Link>
+                                            <Link to={childrenSubItem.path + '/'} className={`${childrenSubItem.active ? 'active' : ''}`} onClick={() => toggletNavActive(childrenSubItem)}>{(childrenSubItem.title)}</Link>
                                             : ''}
                                         </li>
                                       )}

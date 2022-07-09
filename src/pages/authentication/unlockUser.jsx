@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {Container,Row,Col,Form,FormGroup,Button,Input,Label} from 'reactstrap'
-import { EnterPassword,Unlock, RememberPassword,SignIn} from "../../constant";
 const UnlockUser = (props) => {
 
     const [togglePassword,setTogglePassword] = useState(false)
@@ -23,20 +22,20 @@ const UnlockUser = (props) => {
                   <div><a className="logo" href="#javascript"><img className="img-fluid for-light" src={require("../../assets/images/logo/login.png")} alt="looginpage"/><img className="img-fluid for-dark" src={require("../../assets/images/logo/logo_dark.png")} alt="looginpage"/></a></div>
                   <div className="login-main">
                     <Form className="theme-form">
-                      <h4>{Unlock}</h4>
+                      <h4>Разблокировать</h4>
                       <FormGroup>
-                        <Label className="col-form-label">{EnterPassword}</Label>
+                        <Label className="col-form-label">Введите пароль</Label>
                         <Input className="form-control" type={togglePassword ?  "text" : "password" } name="login[password]" value={password} onChange={(e) => handleChange(e)} required="" placeholder="*********"/>
                         <div className="show-hide" onClick={() => HideShowPassword(togglePassword)}><span className={togglePassword ? "" : "show"}></span></div>
                       </FormGroup>
                       <FormGroup className="mb-0">
                         <div className="checkbox ms-3">
                           <Input id="checkbox1" type="checkbox"/>
-                          <Label className="text-muted" for="checkbox1">{RememberPassword}</Label>
+                          <Label className="text-muted" for="checkbox1">Забыли пароль?</Label>
                         </div>
-                        <Button color="primary" type="submit">{Unlock}</Button>
+                        <Button color="primary" type="submit">Разблокировать</Button>
                       </FormGroup>
-                      <p className="mt-4 mb-0">{"Already Have an account?"}<a className="ms-2" href="#javascript">{SignIn}</a></p>
+                      <p className="mt-4 mb-0">{"Already Have an account?"}<a className="ms-2" href="#javascript">Войти</a></p>
                     </Form>
                   </div>
                 </div>

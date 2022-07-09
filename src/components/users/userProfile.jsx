@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Breadcrumb from '../../layout/breadcrumb'
 import { Container, Row, Col, Card, CardHeader, Media } from 'reactstrap'
-import {Email,MarekjecnoMailId,BOD,DDMMYY,Designer,ContactUs,ContactUsNumber,LocationDetails,JOHANDIO,UserProfileDesc1,UserProfileDesc2,UserProfileDesc3,Comment,MarkJecno,Like,Follower,Following,Location} from '../../constant'
 const UserProfile = (props) => {
 
 
@@ -44,32 +43,32 @@ const UserProfile = (props) => {
                       <Row >
                         <Col md="6">
                           <div className="ttl-info text-start">
-                            <h6><i className="fa fa-envelope me-2"></i> {Email}</h6><span>{MarekjecnoMailId}</span>
+                            <h6><i className="fa fa-envelope me-2"></i>Email</h6><span>MarekjecnoMailId</span>
                           </div>
                         </Col>
                         <Col md="6">
                           <div className="ttl-info text-start ttl-sm-mb-0">
-                            <h6><i className="fa fa-calendar"></i>   {BOD}</h6><span>{DDMMYY}</span>
+                            <h6><i className="fa fa-calendar"></i>   BOD</h6><span>DDMMYY</span>
                           </div>
                         </Col>
                       </Row>
                     </Col>
                     <Col sm="12" lg="4" className="order-sm-0 order-xl-1">
                       <div className="user-designation">
-                        <div className="title"><a target="_blank" href="#javascript">{MarkJecno}</a></div>
-                        <div className="desc mt-2">{Designer}</div>
+                        <div className="title"><a target="_blank" href="#javascript">MarkJecno</a></div>
+                        <div className="desc mt-2">Designer</div>
                       </div>
                     </Col>
                     <Col sm="6" lg="4" className="order-sm-2 order-xl-2">
                       <Row>
                         <Col md="6">
                           <div className="ttl-info text-start ttl-xs-mt">
-                            <h6><i className="fa fa-phone"></i>   {ContactUs}</h6><span>{ContactUsNumber}</span>
+                            <h6><i className="fa fa-phone"></i>   ContactUs</h6><span>ContactUsNumber</span>
                           </div>
                         </Col>
                         <Col md="6">
                           <div className="ttl-info text-start ttl-sm-mb-0">
-                            <h6><i className="fa fa-location-arrow"></i>   {Location}</h6><span>{LocationDetails}</span>
+                            <h6><i className="fa fa-location-arrow"></i>   {Location}</h6><span>LocationDetails</span>
                           </div>
                         </Col>
                       </Row>
@@ -88,10 +87,10 @@ const UserProfile = (props) => {
                   <div className="follow">
                     <Row>
                       <Col col="6" className="text-md-end border-end">
-                        <div className="follow-num counter">{"25869"}</div><span>{Follower}</span>
+                        <div className="follow-num counter">{"25869"}</div><span>Follower</span>
                       </Col>
                       <Col col="6" className="text-md-start">
-                        <div className="follow-num counter">{"659887"}</div><span>{Following}</span>
+                        <div className="follow-num counter">{"659887"}</div><span>Following</span>
                       </Col>
                     </Row>
                   </div>
@@ -105,7 +104,7 @@ const UserProfile = (props) => {
                     <Col sm="8">
                       <div className="media"><Media className="img-thumbnail rounded-circle me-3" src={require("../../assets/images/user/7.jpg")} alt="Generic placeholder image" />
                         <div className="media-body align-self-center">
-                          <h5 className="mt-0 user-name">{JOHANDIO}</h5>
+                          <h5 className="mt-0 user-name">JOHANDIO</h5>
                         </div>
                       </div>
                     </Col>
@@ -114,7 +113,7 @@ const UserProfile = (props) => {
                     </Col>
                   </Row>
                   <hr />
-                  <p>{UserProfileDesc1}</p>
+                  <p>UserProfileDesc1</p>
                   <div className="img-container">
                     <div id="aniimated-thumbnials">
                       <a href="#javascript">
@@ -125,10 +124,10 @@ const UserProfile = (props) => {
                   <div className="like-comment mt-4">
                     <ul className="list-inline">
                       <li className="list-inline-item border-end pe-3">
-                        <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  {Like}</label><span className="ms-2 counter">{"2659"}</span>
+                        <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  Like</label><span className="ms-2 counter">{"2659"}</span>
                       </li>
                       <li className="list-inline-item ms-2">
-                        <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  {Comment}</label><span className="ms-2 counter">{"569"}</span>
+                        <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  Comment</label><span className="ms-2 counter">{"569"}</span>
                       </li>
                     </ul>
                   </div>
@@ -142,7 +141,7 @@ const UserProfile = (props) => {
                     <Col sm="8">
                       <div className="media"><Media className="img-thumbnail rounded-circle me-3" src={require("../../assets/images/user/7.jpg")} alt="Generic placeholder image" />
                         <div className="media-body align-self-center">
-                          <h5 className="mt-0 user-name">{JOHANDIO}</h5>
+                          <h5 className="mt-0 user-name">JOHANDIO</h5>
                         </div>
                       </div>
                     </Col>
@@ -151,7 +150,7 @@ const UserProfile = (props) => {
                     </Col>
                   </Row>
                   <hr />
-                  <p>{UserProfileDesc1}</p>
+                  <p>UserProfileDesc1</p>
                   <Row className="mt-4 pictures">
                     <a className="col-sm-6" href="#javascript">
                       <Media body className="img-fluid rounded" src={require("../../assets/images/other-images/profile-style-img.png")} alt="gallery" />
@@ -163,10 +162,10 @@ const UserProfile = (props) => {
                   <div className="like-comment mt-4">
                     <ul className="list-inline">
                       <li className="list-inline-item border-end pe-3">
-                        <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  {Like}</label><span className="ms-2 counter">{"2659"}</span>
+                        <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  Like</label><span className="ms-2 counter">{"2659"}</span>
                       </li>
                       <li className="list-inline-item ms-2">
-                        <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  {Comment}</label><span className="ms-2 counter">{"569"}</span>
+                        <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  Comment</label><span className="ms-2 counter">{"569"}</span>
                       </li>
                     </ul>
                   </div>
@@ -181,7 +180,7 @@ const UserProfile = (props) => {
                     <Col sm="8">
                       <div className="media"><Media className="img-thumbnail rounded-circle me-3" src={require("../../assets/images/user/7.jpg")} alt="Generic placeholder image" />
                         <div className="media-body align-self-center">
-                          <h5 className="mt-0 user-name">{JOHANDIO}</h5>
+                          <h5 className="mt-0 user-name">JOHANDIO</h5>
                         </div>
                       </div>
                     </Col>
@@ -190,14 +189,14 @@ const UserProfile = (props) => {
                     </Col>
                   </Row>
                   <hr />
-                  <p>{UserProfileDesc2}</p>
+                  <p>UserProfileDesc2</p>
                   <div className="like-comment mt-4">
                     <ul className="list-inline">
                       <li className="list-inline-item border-end pe-3">
-                        <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  {Like}</label><span className="ms-2 counter">{"2659"}</span>
+                        <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  Like</label><span className="ms-2 counter">{"2659"}</span>
                       </li>
                       <li className="list-inline-item ms-2">
-                        <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  {Comment}</label><span className="ms-2 counter">{"569"}</span>
+                        <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  Comment</label><span className="ms-2 counter">{"569"}</span>
                       </li>
                     </ul>
                   </div>
@@ -212,7 +211,7 @@ const UserProfile = (props) => {
                     <Col sm="8">
                       <div className="media"><Media className="img-thumbnail rounded-circle me-3" src={require("../../assets/images/user/7.jpg")} alt="Generic placeholder image" />
                         <div className="media-body align-self-center">
-                          <h5 className="mt-0 user-name">{JOHANDIO}</h5>
+                          <h5 className="mt-0 user-name">JOHANDIO</h5>
                         </div>
                       </div>
                     </Col>
@@ -227,7 +226,7 @@ const UserProfile = (props) => {
                       <div className="like-comment mt-4 like-comment-lg-mb">
                         <ul className="list-inline">
                           <li className="list-inline-item border-end pe-3">
-                            <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  {Like}</label><span className="ms-2 counter">{"2659"}</span>
+                            <label className="m-0"><a href="#javascript"><i className="fa fa-heart"></i></a>  Like</label><span className="ms-2 counter">{"2659"}</span>
                           </li>
                           <li className="list-inline-item ms-2">
                             <label className="m-0"><a href="#javascript"><i className="fa fa-comment"></i></a>  {Comment}</label><span className="ms-2 counter">{"569"}</span>
@@ -236,7 +235,7 @@ const UserProfile = (props) => {
                       </div>
                     </Col>
                     <Col xl="6">
-                      <p>{UserProfileDesc3}</p>
+                      <p>UserProfileDesc3</p>
                     </Col>
                   </Row>
                 </div>

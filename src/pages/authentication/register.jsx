@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {Container,Row,Col,Form,FormGroup,Input,Label,Button} from 'reactstrap'
-import {Password,SignIn, EmailAddress ,CreateAccount, YourName, PrivacyPolicy} from '../../constant';
 import { Twitter, Facebook,GitHub } from 'react-feather';
 
 const Register = (props) => {
@@ -27,33 +26,33 @@ const Register = (props) => {
                   <h4>{"Create your account"}</h4>
                   <p>{"Enter your personal details to create account"}</p>
                   <FormGroup>
-                    <Label className="col-form-label pt-0">{YourName}</Label>
+                    <Label className="col-form-label pt-0">Ваше имя</Label>
                     <Row>
                       <Col xs="6">
-                        <Input className="form-control" type="text" required="" placeholder="First name"/>
+                        <Input className="form-control" type="text" required="" placeholder="Имя"/>
                       </Col>
                       <Col xs="6">
-                        <Input className="form-control" type="text" required="" placeholder="Last name"/>
+                        <Input className="form-control" type="text" required="" placeholder="Фамилия"/>
                       </Col>
                     </Row>
                   </FormGroup>
                   <FormGroup>
-                    <Label className="col-form-label">{EmailAddress}</Label>
+                    <Label className="col-form-label">Email</Label>
                     <Input className="form-control" type="email" required="" placeholder="Test@gmail.com"/>
                   </FormGroup>
                   <FormGroup>
-                    <Label className="col-form-label">{Password}</Label>
+                    <Label className="col-form-label">Пароль</Label>
                     <Input className="form-control" type={togglePassword ?  "text" : "password" } name="login[password]" value={password} onChange={(e) => handleChange(e)} required="" placeholder="*********"/>
                     <div className="show-hide" onClick={() => HideShowPassword(togglePassword)}><span className={togglePassword ? "" : "show"}></span></div>
                   </FormGroup>
                   <div className="login-btn mb-0">
                     <div className="checkbox ms-3">
                       <Input id="checkbox1" type="checkbox"/>
-                      <Label className="text-muted" for="checkbox1">{"Agree with"}<a className="ms-2" href="#javascript">{PrivacyPolicy}</a></Label>
+                      <Label className="text-muted" for="checkbox1">{"Согласен с "}<a className="ms-2" href="#javascript">Политикой конфиденциальности</a></Label>
                     </div>
-                    <Button color="primary" type="submit">{CreateAccount}</Button>
+                    <Button color="primary" type="submit">Создать аккаунт</Button>
                   </div>
-                  <h6 className="text-muted mt-4 or">{"Or signup with"}</h6>
+                  <h6 className="text-muted mt-4 or">{"Либо, создайте аккаунт с"}</h6>
                   <div className="social mt-4">
                     <div className="btn-showcase">
                       <Button color="light">
@@ -70,7 +69,7 @@ const Register = (props) => {
                       </Button>
                     </div>
                   </div>
-                  <p className="mt-4 mb-0">{"Already have an account?"}<a className="ms-2" href="#javascript">{SignIn}</a></p>
+                  <p className="mt-4 mb-0">{"Уже есть аккаунт?"}<a className="ms-2" href="#javascript">Войти</a></p>
                 </Form>
               </div>
             </div>
