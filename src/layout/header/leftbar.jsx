@@ -22,10 +22,6 @@ const Leftbar = (props) => {
     return size;
   }
 
-
- 
-
-
   const responsive_openCloseSidebar = (toggle) => {
     if (width <= 991) {
       setBonusUI(false)
