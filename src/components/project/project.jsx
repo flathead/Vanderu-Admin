@@ -27,7 +27,7 @@ const Project = () => {
             <Card>
               <Row>
 
-                <Col md="8">
+                <Col md="8"> 
                   <Nav tabs className="border-tab">
                     <NavItem><NavLink className={activeTab === "1" ? "active" : ''} onClick={() => setActiveTab("1")}><Target />Все</NavLink></NavItem>
                     <NavItem><NavLink className={activeTab === "2" ? "active" : ''} onClick={() => setActiveTab("2")}><CheckCircle />Активные</NavLink></NavItem>
