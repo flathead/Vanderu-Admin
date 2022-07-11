@@ -26,7 +26,8 @@ const Project = () => {
           <Col md="12" className="project-list">
             <Card>
               <Row>
-                <Col md="6">
+
+                <Col md="8">
                   <Nav tabs className="border-tab">
                     <NavItem><NavLink className={activeTab === "1" ? "active" : ''} onClick={() => setActiveTab("1")}><Target />Все</NavLink></NavItem>
                     <NavItem><NavLink className={activeTab === "2" ? "active" : ''} onClick={() => setActiveTab("2")}><CheckCircle />Активные</NavLink></NavItem>
@@ -34,7 +35,8 @@ const Project = () => {
                     <NavItem><NavLink className={activeTab === "3" ? "active" : ''} onClick={() => setActiveTab("4")}><Pause />На паузе</NavLink></NavItem>
                   </Nav>
                 </Col>
-                <Col md="6">
+				
+                <Col md="4">
                   <div className="text-end">
                     <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/project/new-project/`}> <PlusSquare />Создать новый проект</Link>
                   </div>
@@ -42,6 +44,7 @@ const Project = () => {
               </Row>
             </Card>
           </Col>
+
           <Col sm="12">
             <Card>
               <CardBody>
