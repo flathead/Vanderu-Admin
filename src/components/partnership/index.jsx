@@ -157,13 +157,13 @@ const Partnership = () => {
                             <CardBody>
                                 <FormGroup>
                                     <Row>
-                                        <Col xs="8">
+                                        <Col xs="12 my-1" sm="8">
                                             <Input
                                             disabled
                                             value="0 рублей к выплате"
                                             />
                                         </Col>
-                                        <Col xs="4">
+                                        <Col xs="12 my-1" sm="4">
                                             <Button color="primary" disabled>Недоступно</Button>
                                         </Col>
                                     </Row>
@@ -180,13 +180,13 @@ const Partnership = () => {
                                 </FormGroup>
                                 <FormGroup>
                                     <Row>
-                                        <Col xs="8">
+                                        <Col xs="12 my-1" sm="8">
                                             <Input
                                             disabled
                                             value="Реквизитов нет"
                                             />
                                         </Col>
-                                        <Col xs="4">
+                                        <Col xs="12 my-1" sm="4">
                                             <Button color="primary">Редактировать</Button>
                                         </Col>
                                     </Row>

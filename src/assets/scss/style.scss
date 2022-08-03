@@ -13,18 +13,16 @@
 
 // *** utils ***
 
-
 @import "utils/variables";
 
 :root {
-    --theme-deafult: #7366ff;
-    --theme-secondary: #f73164;
+  --theme-deafult: #7366ff;
+  --theme-secondary: #f73164;
 }
 
 // *** base ***
 @import "base/reset";
 @import "base/typography";
-
 
 //  *** components ***
 @import "components/according";
@@ -61,7 +59,6 @@
 @import "components/typeahead-search";
 @import "components/react-plugin";
 
-
 //	*** pages ***
 
 @import "pages/dashboard_default";
@@ -76,8 +73,7 @@
 @import "pages/user-profile";
 @import "pages/new_project";
 
-
-// *** layout *** 
+// *** layout ***
 
 @import "layout/footer";
 @import "layout/grid";
@@ -93,33 +89,33 @@
 @import "themes/responsive";
 
 .radio-pink {
-	color: pink;
+  color: pink;
 }
 .radio-green {
-	color: rgb(152, 255, 152);
+  color: rgb(152, 255, 152);
 }
 .radio-gold {
-	color: gold;
+  color: gold;
 }
 .radio-blue {
-	color: rgb(102, 102, 224);
+  color: rgb(102, 102, 224);
 }
 .radio-purple {
-	color: purple;
+  color: purple;
 }
 
 .bg-pink {
-	background: pink;
+  background: pink;
 }
 .bg-green {
-	background: rgb(152, 255, 152);
+  background: rgb(152, 255, 152);
 }
 .bg-gold {
-	background: gold;
+  background: gold;
 }
 .bg-blue {
-	background: rgb(102, 102, 224);
+  background: rgb(102, 102, 224);
 }
 .bg-purple {
-	background: purple;
+  background: purple;
 }

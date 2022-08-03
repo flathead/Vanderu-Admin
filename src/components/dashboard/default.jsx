@@ -26,23 +26,23 @@ const Default = () => {
               <CardBody className="p-0">
                 <Row className="m-0">
                   <Col xl="3" className="earning-content p-0">
-                    <Row className="m-0 chart-left">
-                      <Col xl="12" className="p-0 left_side_earning">
+                    <Row className="m-0 chart-default">
+                      <Col xs="12" className="p-0 info-title">
                         <h5>{"Заработано"}</h5>
                       </Col>
-                      <Col xl="12" className="p-0 left_side_earning">
-                        <h5>{"120,043.24 ₽"} </h5>
+                      <Col md="3" className="p-0 info-line card-1">
+                        <h5>{"120,043.24 ₽"}</h5>
                         <p className="font-roboto">{"За все время"}</p>
                       </Col>
-                      <Col xl="12" className="p-0 left_side_earning">
+                      <Col md="3" className="p-0 info-line card-2">
                         <h5>{"4 055.56 ₽"}</h5>
                         <p className="font-roboto">{"За этот месяц"}</p>
                       </Col>
-                      <Col xl="12" className="p-0 left_side_earning">
+                      <Col md="3" className="p-0 info-line card-3">
                         <h5>{"1 004.11 ₽"}</h5>
                         <p className="font-roboto">{"За неделю"}</p>
                       </Col>
-                      <Col xl="12" className="p-0 left_side_earning">
+                      <Col md="3" className="p-0 info-line card-4">
                         <h5>{"104.11"}</h5>
                         <p className="font-roboto">{"Сегодня"}</p>
                       </Col>
@@ -82,7 +82,7 @@ const Default = () => {
                       </Row>
                     </div>
                     <Row className="border-top m-0">
-                    <Col xl="4" md="12" className="pe-0">
+                    <Col xl="4" md="12" className="p-0">
                         <div className="media p-0">
                           <div className="media-left"><i className="icofont icofont-cur-dollar"></i></div>
                           <div className="media-body">
@@ -91,7 +91,7 @@ const Default = () => {
                           </div>
                         </div>
                       </Col>
-                      <Col xl="4" md="6" sm="6">
+                      <Col xl="4" md="6" sm="6" className="p-0">
                         <div className="media p-0">
                           <div className="media-left bg-secondary"><i className="icofont icofont-heart-alt"></i></div>
                           <div className="media-body">
@@ -114,11 +114,11 @@ const Default = () => {
           <Col md="12" className="project-list">
             <Card>
               <Row>
-                <Col md="6">
+                <Col md="3">
                   <h4>{"Мои проекты"}</h4>
                 </Col>
-                <Col md="6">
-                  <div className="text-end">
+                <Col md="7">
+                  <div className="text-start">
                     <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/project/new-project/`}> <PlusSquare />Создать новый проект</Link>
                   </div>
                 </Col>

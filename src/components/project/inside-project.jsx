@@ -538,55 +538,59 @@ const InsideProject = () => {
         
             <Container fluid={true} className="project-inside-container">
 
-                <div className="fixed-delete-btn">
-                    <div className="btn-wrapper">
-                        <Button className="p-0" color="transparent"><Delete color="white" title="Удалить" /></Button>
-                    </div>
-                    <p className="p-0">Удалить проект</p>
-                </div>
-
                 <Row>
                     <Card>
                         <CardBody className="p-2">
                             <Col xs="12">
                                 <div className="switchers">
-                                    <div className="switch-wrapper">
-                                        <Switch
-                                            checked={checked0}
-                                            onChange={handleChange0}
-                                            onColor="#86d3ff"
-                                            onHandleColor="#2693e6"
-                                            handleDiameter={30}
-                                            uncheckedIcon={false}
-                                            checkedIcon={false}
-                                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                                            height={10}
-                                            width={38}
-                                            className="react-switch"
-                                            id="sw-1"
-                                        />
-                                        <label htmlFor="sw-1">В архив</label>
-                                    </div>
-                                    <div className="switch-wrapper">
-                                        <Switch
-                                            checked={checked1}
-                                            onChange={handleChange1}
-                                            onColor="#86d3ff"
-                                            onHandleColor="#2693e6"
-                                            handleDiameter={30}
-                                            uncheckedIcon={false}
-                                            checkedIcon={false}
-                                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                                            height={10}
-                                            width={38}
-                                            className="react-switch"
-                                            id="sw-1"
-                                        />
-                                        <label htmlFor="sw-1">На паузу</label>
-                                    </div>
-                                    <Button color="primary">Передать права</Button>
+                                    <Col sm="2">
+                                    	<div className="switch-wrapper">
+	                                        <Switch
+	                                            checked={checked0}
+	                                            onChange={handleChange0}
+	                                            onColor="#86d3ff"
+	                                            onHandleColor="#2693e6"
+	                                            handleDiameter={30}
+	                                            uncheckedIcon={false}
+	                                            checkedIcon={false}
+	                                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+	                                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+	                                            height={10}
+	                                            width={38}
+	                                            className="react-switch"
+	                                            id="sw-1"
+	                                        />
+	                                        <label htmlFor="sw-1">В архив</label>
+	                                    </div>
+	                                    <div className="switch-wrapper">
+	                                        <Switch
+	                                            checked={checked1}
+	                                            onChange={handleChange1}
+	                                            onColor="#86d3ff"
+	                                            onHandleColor="#2693e6"
+	                                            handleDiameter={30}
+	                                            uncheckedIcon={false}
+	                                            checkedIcon={false}
+	                                            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+	                                            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+	                                            height={10}
+	                                            width={38}
+	                                            className="react-switch"
+	                                            id="sw-1"
+	                                        />
+	                                        <label htmlFor="sw-1">На паузу</label>
+	                                    </div>
+                                    </Col>
+
+									<Col xs="my-0" sm="7 text-center" className="text-center my-4">
+                                        <Button color="primary">Сменить токен</Button>
+                                        
+                                    </Col>
+
+                                    <Col sm="3" className="d-flex text-end flex-column">
+										<Button className="mb-1" color="primary">Передать права</Button>
+										<Button color="danger">Удалить проект</Button>
+									</Col>
                                 </div>
                             </Col>
                         </CardBody>
@@ -603,10 +607,9 @@ const InsideProject = () => {
                                         <Button className="me-3 mb-3" color="primary">Сообщения и уведомления</Button>
                                         <Button className="me-3 mb-3" color="primary">Добавить подписчика</Button>
                                     </Col>
-                                    <Col sm="3" className="text-end">
-                                        <Button className="me-1 mb-2" color="primary">Сменить токен</Button>
-                                        <a href="/#" className="me-1 mb-2" title="Подсказка">@web_wanderu_bot</a>
-                                    </Col>
+									<Col sm="3" className="d-flex justify-content-sm-end">
+										<a href="/#" title="Подсказка">@web_wanderu_bot</a>
+									</Col>
                                 </Row>
                             </Col>
                         </CardBody>
@@ -629,8 +632,8 @@ const InsideProject = () => {
                                 </Nav>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "1" ? "active" : ''}>
-                                    <Row>
-                                        <Col sm="6">
+                                    <Row className="my-4">
+                                        <Col sm="12">
                                             <h5>Статистика проекта</h5>
 
                                             <Table>
@@ -672,7 +675,9 @@ const InsideProject = () => {
                                                 </tbody>
                                             </Table>
                                         </Col>
-                                        <Col sm="6">
+                                    </Row>
+									<Row>
+										<Col sm="12 mt-4">
                                             <div className="d-flex justify-content-between align-items-center mb-3">
                                                 <h5>Подключенные ресурсы</h5>
                                                 <Button className="p-0" color="transparent"><Settings /></Button>
@@ -689,11 +694,11 @@ const InsideProject = () => {
                                                 subHeaderWrap
                                             />
                                         </Col>
-                                    </Row>
+									</Row>
                                 </TabContent>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "2" ? "active" : ''}>
-                                    <Row>
+                                    <Row className="my-4">
                                         <Col>
                                             <h5>Тарифы</h5>
         
@@ -712,7 +717,7 @@ const InsideProject = () => {
                                 </TabContent>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "3" ? "active" : ''}>
-                                    <Row>
+                                    <Row className="my-4">
                                         <Col>
                                             <h5>Ресурсы</h5>
         
@@ -731,7 +736,7 @@ const InsideProject = () => {
                                 </TabContent>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "4" ? "active" : ''}>
-                                    <Row>
+                                    <Row className="my-4">
                                         <Col xs="12">
                                             <h5>Промокоды</h5>
         
@@ -758,7 +763,7 @@ const InsideProject = () => {
                                 </TabContent>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "5" ? "active" : ''}>
-                                    <Row>
+                                    <Row className="my-4">
                                         <Col xs="12">
                                             <h5>UTM-метки</h5>
         
@@ -776,7 +781,7 @@ const InsideProject = () => {
                                         <Col xs="12" className="mt-4">
                                             <h5>Создание UTM-метки</h5>
 
-                                            <FormGroup>
+                                            <FormGroup className="d-flex flex-wrap gap-3">
                                                 <Button color="primary" className="me-3">Создать</Button>
                                                 <Button color="primary" className="me-3">Статистика</Button>
                                                 <Button color="primary">Переименовать рекл. компанию</Button>
@@ -786,7 +791,7 @@ const InsideProject = () => {
                                 </TabContent>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "8" ? "active" : ''}>
-                                    <Row>
+                                    <Row className="my-4">
                                         <Col>
                                             <h5>Подтверждение платежей</h5>
         
@@ -805,7 +810,7 @@ const InsideProject = () => {
                                 </TabContent>
 
                                 <TabContent activeTab={activeTab} className={activeTab === "9" ? "active" : ''}>
-                                    <Row>
+                                    <Row className="my-4">
                                         <Col>
                                             <h5>История продаж</h5>
         
@@ -828,8 +833,8 @@ const InsideProject = () => {
                         <TabContent activeTab={activeTab} className={activeTab === "1" ? "active" : ''}>
                             <Card>
                                 <CardBody>
-                                        <Row>
-                                            <Col sm="6">
+                                        <Row className="my-4">
+                                            <Col sm="12">
                                                 <div className="d-flex justify-content-between align-items-center mb-3">
                                                     <h5>Подключенные тарифы</h5>
                                                     <Button className="p-0" color="transparent"><Settings /></Button>
@@ -846,12 +851,14 @@ const InsideProject = () => {
                                                 subHeaderWrap
                                                 />
 
-                                                <div className="text-end">
+                                                <div className="text-start">
                                                     <Link to={`${process.env.PUBLIC_URL}/tariff/`}><Button className="mt-3 me-3" color="primary">Добавить</Button></Link>
                                                     <Button className="mt-3" color="primary">Редактировать</Button>
                                                 </div>
                                             </Col>
-                                            <Col sm="6">
+                                        </Row>
+										<Row>
+											<Col sm="12 mt-4">
                                                 <div className="d-flex justify-content-between align-items-center mb-3">
                                                     <h5>Подключенные платёжные системы</h5>
                                                     <Button className="p-0" color="transparent"><Settings /></Button>
@@ -877,7 +884,7 @@ const InsideProject = () => {
                                                     </Col>
                                                 </Row>
                                             </Col>
-                                        </Row>
+										</Row>
                                 </CardBody>
                             </Card>
                         </TabContent>
