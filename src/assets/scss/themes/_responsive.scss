@@ -2307,14 +2307,14 @@
           .logo-wrapper {
             padding: 17px 30px;
 
-            .back-btn {
+            /* .back-btn {
               display: inline-block;
               float: right;
               font-size: 20px;
-            }
+            } */
 
             .toggle-sidebar {
-              display: none;
+              top: 20px;
             }
           }
 

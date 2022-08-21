@@ -20,6 +20,13 @@ const Sidebar = () => {
         document.querySelector(".sidebar-main").className = "sidebar-main"
     }
   }
+  const hideSidebarOnMobile = () => {
+	if (window.innerWidth <= 991) {
+		document.querySelector('#sidebar-wrapper').classList.add( 'close_icon' );
+	} else {
+		document.querySelector('#sidebar-wrapper').classList.remove( 'close_icon' );
+	}
+  }
   useEffect(() => {
     document.querySelector(".left-arrow").classList.add("d-none")
 
@@ -61,6 +68,7 @@ const Sidebar = () => {
 
   const handleResize = () => {
     setWidth(window.innerWidth - 500);
+	hideSidebarOnMobile();
   }
 
   const setNavActive = (item) => {
@@ -94,11 +102,13 @@ const Sidebar = () => {
     setMainMenu({ mainmenu: MENUITEMS })
   }
 
+  
   const toggletNavActive = (item) => {
     if (window.innerWidth <= 991) {
       document.querySelector(".page-header").className = "page-header close_icon";
       document.querySelector(".sidebar-wrapper").className = "sidebar-wrapper close_icon "
       document.querySelector(".mega-menu-container").classList.remove("d-block")
+	  
       if (item.type === "sub") {
         document.querySelector(".page-header").className = "page-header ";
         document.querySelector(".sidebar-wrapper").className = "sidebar-wrapper"
@@ -186,11 +196,6 @@ const Sidebar = () => {
     }
   };
 
-  const responsiveSidebar = () => {
-    document.querySelector(".page-header").className = "page-header close_icon";
-    document.querySelector(".sidebar-wrapper").className = "sidebar-wrapper close_icon"
-  }
-
   return (
     <Fragment>
       <div className={`bg-overlay1`} onClick={() => { closeOverlay() }} ></div>
@@ -199,7 +204,7 @@ const Sidebar = () => {
           <Link to={`${process.env.PUBLIC_URL}/dashboard/`}>
             <img className="img-fluid for-light" src={require("../../assets/images/logo/logo.png")} alt="" />
           </Link>
-          <div className="back-btn" onClick={() => responsiveSidebar()}><i className="fa fa-angle-left"></i></div>
+          {/* <div className="back-btn" onClick={() => responsiveSidebar()}><i className="fa fa-angle-left"></i></div> */}
           <div className="toggle-sidebar" onClick={() => openCloseSidebar(sidebartoogle)}><Grid className="status_toggle middle sidebar-toggle" /></div>
         </div>
         <div className="logo-icon-wrapper">
@@ -209,9 +214,7 @@ const Sidebar = () => {
           <div className="left-arrow" onClick={scrollToLeft}><ArrowLeft /></div>
           <div id="sidebar-menu">
             <ul className="sidebar-links custom-scrollbar" >
-              <li className="back-btn">
-                <div className="mobile-back text-end"><span>{"Back"}</span><i className="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-              </li>
+ 
               {
                 MENUITEMS.map((Item, i) =>
                   <Fragment key={i}>
