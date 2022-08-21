@@ -139,11 +139,11 @@ const FaqComponent = () => {
                         <Col md="12" className="project-list">
                             <Card>
                             <Row>
-                                <Col md="6">
+                                <Col md="3">
                                 <h4>{"Тех поддержка"}</h4>
                                 </Col>
-                                <Col md="6">
-                                <div className="text-end">
+                                <Col md="7">
+                                <div className="text-start">
                                     <Link className="btn btn-primary" style={{ color: 'white' }} to={`${process.env.PUBLIC_URL}/support/`}> <PlusSquare />{"Написать"}</Link>
                                 </div>
                                 </Col>

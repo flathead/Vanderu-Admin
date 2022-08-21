@@ -2,7 +2,14 @@ import React, { Fragment, useState } from 'react';
 import Breadcrumb from '../../layout/breadcrumb'
 import { Container, Row, Col, Card, CardBody, Form, FormGroup, Input, CardFooter, Button, Table } from 'reactstrap'
 import Switch from "react-switch";
+import { Portal } from "react-overlays";
 import DatePicker from 'react-datepicker';
+
+const CalendarContainer = ({ children }) => {
+	const el = document.getElementById("calendar-portal");
+  
+	return <Portal container={el}>{children}</Portal>;
+  };
 
 const Spam = () => {
 
@@ -71,15 +78,16 @@ const Spam = () => {
                                         <FormGroup className="delay">
                                             <label htmlFor="date">Выберите дату и время</label>
                                             <DatePicker
-                                            selected={startDate}
-                                            onChange={(date) => setStartDate(date)}
                                             showTimeSelect
+											selected={startDate}
+											onChange={(date) => setStartDate(date)}
+											
+											tabIndex={1}
                                             timeFormat="HH:mm"
                                             timeIntervals={15}
                                             timeCaption="time"
                                             dateFormat="MMMM d, yyyy h:mm aa"
-                                            className="form-select"
-                                            id="date"
+                                            popperContainer={CalendarContainer}
                                             />
                                         </FormGroup>
                                     </Col>

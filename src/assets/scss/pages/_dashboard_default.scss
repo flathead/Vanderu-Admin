@@ -825,7 +825,7 @@
   }
 }
 
-.default-datepicker {
+/* .default-datepicker {
   .react-datepicker__month-container {
     width: 100%;
   }
@@ -868,7 +868,7 @@
       }
     }
   }
-}
+} */
 
 @media (max-width: 360px) {
   .footer {
@@ -2717,7 +2717,7 @@ footer {
   .earning-content {
     .chart-default {
       display: grid;
-      grid-template: "i-title i-title i-title i-title" "i-card-1 i-card-2 i-card-3 i-card-4" auto / 1fr 1fr 1fr 1fr;
+      grid-template: "i-title" "i-card-1" "i-card-2" "i-card-3" "i-card-4" auto / 1fr;
       column-gap: 4rem;
       row-gap: 2rem;
       padding: 20px;
@@ -2741,6 +2741,9 @@ footer {
         }
       }
 
+      @media screen and (max-width: 1365px) {
+        grid-template: "i-title i-title i-title i-title" "i-card-1 i-card-2 i-card-3 i-card-4" auto / 1fr 1fr 1fr 1fr;
+      }
       @media screen and (max-width: 780px) {
         grid-template: "i-title i-title" "i-card-1 i-card-2" "i-card-3 i-card-4" auto / 1fr 1fr;
       }
